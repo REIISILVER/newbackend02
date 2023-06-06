@@ -1,0 +1,285 @@
+ERROR - 2023-06-03 00:47:43 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 02:14:01 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 02:15:33 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 02:16:16 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 02:22:46 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 02:23:17 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 02:25:50 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 03:36:31 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 03:42:38 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:35:28 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:35:31 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:39:33 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:40:45 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_connect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:45:20 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_connect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:45:39 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_connect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:53:53 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_connect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 04:53:57 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_connect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 09:46:18 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-06-03 10:02:11 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: fe_sendauth: no password supplied in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=localhost ...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
