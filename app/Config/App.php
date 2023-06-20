@@ -1,9 +1,10 @@
 <?php
-
 namespace Config;
+
 
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Session\Handlers\FileHandler;
+
 
 class App extends BaseConfig
 {
@@ -444,4 +445,7 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+
+
+
 }

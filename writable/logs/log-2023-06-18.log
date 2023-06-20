@@ -1,0 +1,18 @@
+CRITICAL - 2023-06-18 00:01:06 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-18 00:11:12 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-18 00:12:58 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-18 00:16:04 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-18 01:39:06 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-18 01:56:08 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

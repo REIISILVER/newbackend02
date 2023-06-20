@@ -31,8 +31,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-//ruta del post para logear
-$routes->post('auth/login','Login::Onlogin');
+//ruta del post para hacer login
+$routes->post('login','loggin::loginOn');
 
 /*
  * --------------------------------------------------------------------

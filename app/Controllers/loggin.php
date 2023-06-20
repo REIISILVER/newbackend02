@@ -1,10 +1,10 @@
-﻿<?php
+<?php
 namespace App\Controllers;
 
 use App\Models\User_model;
 use CodeIgniter\API\ResponseTrait;
 use Firebase\JWT\JWT;
-class Login extends BaseController
+class loggin extends BaseController
 {
     use ResponseTrait;
 

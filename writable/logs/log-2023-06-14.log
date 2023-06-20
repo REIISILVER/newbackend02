@@ -1,0 +1,16 @@
+CRITICAL - 2023-06-14 08:34:13 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatoken')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-14 08:35:00 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatoken')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

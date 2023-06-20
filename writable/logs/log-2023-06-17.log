@@ -1,0 +1,180 @@
+CRITICAL - 2023-06-17 16:02:57 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:03:15 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:09:37 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:14:40 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:14:48 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:14:55 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:16:01 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:29:46 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 53 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(53): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 16:32:07 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\Login.php on line 55 and at least 3 expected
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\Login.php(55): Firebase\JWT\JWT::encode([...], 'generatokens')
+ 2 APPPATH\Controllers\Login.php(32): App\Controllers\Login->generateToken('1', 'brylo1@outlook.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 17:06:09 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Login.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 17:07:58 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Login.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->loginOn()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-17 21:44:08 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 21:44:25 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 21:44:57 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 21:45:13 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 21:47:48 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 21:52:06 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 21:57:21 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:05:21 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:09:09 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:09:38 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:13:52 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:13:57 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:14:27 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:15:21 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:19:18 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:24:36 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:25:56 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:40:31 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:40:52 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:44:58 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:45:55 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 22:57:39 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:04:00 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:06:20 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:07:55 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:09:51 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:10:41 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:13:13 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:13:46 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:16:09 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:24:08 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-17 23:24:26 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\Login.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
