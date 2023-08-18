@@ -3,6 +3,8 @@
 namespace Config;
 
 // Create a new instance of our RouteCollection class.
+use App\Controllers\MuralController;
+
 $routes = Services::routes();
 
 /*
@@ -33,7 +35,17 @@ $routes->get('/', 'Home::index');
 
 //ruta del post para hacer login
 $routes->post('login','loggin::loginOn');
-
+//ruta para obtener los id
+$routes->get('mural/getId','MuralController::getIdMurals');
+//ruta para obtener las solicitudes
+$routes->get('mural/solicitudes','MuralController::getSolicitud');
+//rutas que va recibir los post del frontend
+// ruta para guardar los murales
+$routes->post('mural/insert','MuralController::create');
+//ruta para editar o ver en el dashboard los murales
+$routes->post('mural/dashboard','MuralController::EditMural');
+//ruta que recibe un idMural para editar el mural
+$routes->post('mural/edit','MuralController::getMuralbyId');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

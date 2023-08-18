@@ -1,0 +1,642 @@
+ERROR - 2023-07-25 20:45:13 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(33): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 20:45:14 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(33): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 20:51:23 --> Undefined property: App\Controllers\MuralController::$muralModel
+in APPPATH\Controllers\MuralController.php on line 98.
+ 1 APPPATH\Controllers\MuralController.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MuralController::$muralModel', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 20:53:41 --> Undefined property: App\Controllers\MuralController::$muralModel
+in APPPATH\Controllers\MuralController.php on line 38.
+ 1 APPPATH\Controllers\MuralController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MuralController::$muralModel', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 20:55:14 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 20:55:14 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(57): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 20:58:42 --> Undefined constant "App\Controllers\this"
+in APPPATH\Controllers\MuralController.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 20:59:16 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(58): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 20:59:16 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(58): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:00:01 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(58): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:00:01 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(58): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:02:55 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('z54c8fcb-...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(58): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:02:55 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('z54c8fcb-...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES (\'z54c8fcb-...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(58): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:03:21 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('z54c8fcb-...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(58): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:03:21 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('z54c8fcb-...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES (\'z54c8fcb-...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(58): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:03:54 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «r54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('r54c8fcb-...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(58): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:03:54 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «r54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('r54c8fcb-...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «r54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES (\'r54c8fcb-...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'r54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'r54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'r54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(58): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:04:52 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «r54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('r54c8fcb-...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:04:52 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «r54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('r54c8fcb-...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «r54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES (\'r54c8fcb-...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'r54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'r54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'r54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(57): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:05:00 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:05:00 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(57): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:05:16 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('z54c8fcb-...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:05:16 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES ('z54c8fcb-...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo uuid: «z54c8fcb-1d10-4df1-9604-ba3182933e92»
+LINE 1: ..., &quot;id_user&quot;, &quot;height&quot;, &quot;width&quot;, &quot;estado&quot;) VALUES (\'z54c8fcb-...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'z54c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(57): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:05:34 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(57): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:05:34 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(57): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:19:55 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:19:55 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:21:55 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:21:55 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:23:41 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:23:41 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:23:58 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(b15c8fcb-1d10-4df1-9604-ba3182933e92). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:23:58 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(b15c8fcb-1d10-4df1-9604-ba3182933e92).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(b15c8fcb-1d10-4df1-9604-ba3182933e92).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'b15c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'b15c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'b15c8fcb-1d10-4df1-9604-ba3182933e92\', 1, 1600, 900, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:24:39 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:24:39 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:37:32 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:37:32 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 21:38:48 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 21:38:48 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 22:21:40 --> ErrorException: pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'SELECT LASTVAL(...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(89): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-25 22:21:40 --> pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval no está definido en esta sesión', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(440): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(335): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\MuralController.php(89): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

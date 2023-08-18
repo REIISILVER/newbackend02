@@ -1,0 +1,481 @@
+CRITICAL - 2023-08-11 20:53:44 --> Undefined property: stdClass::$textos
+in APPPATH\Controllers\MuralController.php on line 226.
+ 1 APPPATH\Controllers\MuralController.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$textos', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 226)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 21:06:19 --> Attempt to read property "id_mural" on array
+in APPPATH\Controllers\MuralController.php on line 224.
+ 1 APPPATH\Controllers\MuralController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_mural" on array', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 224)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 21:16:56 --> Attempt to read property "id_mural" on array
+in APPPATH\Controllers\MuralController.php on line 224.
+ 1 APPPATH\Controllers\MuralController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_mural" on array', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 224)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 21:25:57 --> Undefined array key "url"
+in APPPATH\Controllers\MuralController.php on line 225.
+ 1 APPPATH\Controllers\MuralController.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "url"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 225)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 22:20:01 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 230.
+ 1 APPPATH\Controllers\MuralController.php(230): array_map(Object(Closure), '{NULL}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 22:56:27 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 230.
+ 1 APPPATH\Controllers\MuralController.php(230): array_map(Object(Closure), '{NULL}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 22:58:10 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 22:59:17 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:02:19 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:02:49 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:04:57 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:06:21 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:08:21 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-11 23:12:46 --> ErrorException: pg_query(): Query failed: ERROR:  no se pudo identificar un operador de igualdad para el tipo json
+LINE 5:                 ARRAY_AGG(DISTINCT json_build_array(vid.url_...
+                                           ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), '\r\n            S...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('\r\n            S...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(75): CodeIgniter\Database\BaseConnection->query('\r\n            S...', Array)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(220): App\Models\Mural_Model->getMuralbyId('d353cead-f22b-4...')
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-11 23:12:46 --> pg_query(): Query failed: ERROR:  no se pudo identificar un operador de igualdad para el tipo json
+LINE 5:                 ARRAY_AGG(DISTINCT json_build_array(vid.url_...
+                                           ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no se pudo identificar un operador de igualdad para el tipo json
+LINE 5:                 ARRAY_AGG(DISTINCT json_build_array(vid.url_...
+                                           ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), '
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_build_array(vid.url_video)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_build_array(vid.url_video)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_build_array(vid.url_video)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 5 APPPATH\Models\Mural_Model.php(75): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_build_array(vid.url_video)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = ?
+            GROUP BY
+                mur.id_mural
+        ', [...])
+ 6 APPPATH\Controllers\MuralController.php(220): App\Models\Mural_Model->getMuralbyId('d353cead-f22b-43f8-8c23-65f1800c29b5')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:16:19 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:16:46 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:21:50 --> array_map(): Argument #2 ($array) must be of type array, null given
+in APPPATH\Controllers\MuralController.php on line 227.
+ 1 APPPATH\Controllers\MuralController.php(227): array_map(Object(Closure), null)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:22:53 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 227.
+ 1 APPPATH\Controllers\MuralController.php(227): array_map(Object(Closure), '{"[\\"C:\\\\\\\\wamp64\\\\\\\\www\\\\\\\\codeigniter4-framework-5d3d4b2\\\\\\\\recursos/videos/video_64d43107b2c98.mp4\\"]"}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-11 23:26:16 --> ErrorException: pg_query(): Query failed: ERROR:  las llamadas a funciones de agregación no pueden contener llamadas a funciones que retornan conjuntos
+LINE 5:                 ARRAY_AGG(DISTINCT json_array_elements_text(...
+                                           ^
+HINT:  Puede intentar mover la funci[on que retorna conjuntos a un elemento LATERAL FROM. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), '\r\n            S...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('\r\n            S...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(75): CodeIgniter\Database\BaseConnection->query('\r\n            S...', Array)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(220): App\Models\Mural_Model->getMuralbyId('d353cead-f22b-4...')
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-11 23:26:16 --> pg_query(): Query failed: ERROR:  las llamadas a funciones de agregación no pueden contener llamadas a funciones que retornan conjuntos
+LINE 5:                 ARRAY_AGG(DISTINCT json_array_elements_text(...
+                                           ^
+HINT:  Puede intentar mover la funci[on que retorna conjuntos a un elemento LATERAL FROM.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  las llamadas a funciones de agregación no pueden contener llamadas a funciones que retornan conjuntos
+LINE 5:                 ARRAY_AGG(DISTINCT json_array_elements_text(...
+                                           ^
+HINT:  Puede intentar mover la funci[on que retorna conjuntos a un elemento LATERAL FROM.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), '
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_array_elements_text(vid.url_video::json)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_array_elements_text(vid.url_video::json)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_array_elements_text(vid.url_video::json)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 5 APPPATH\Models\Mural_Model.php(75): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT json_array_elements_text(vid.url_video::json)) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = ?
+            GROUP BY
+                mur.id_mural
+        ', [...])
+ 6 APPPATH\Controllers\MuralController.php(220): App\Models\Mural_Model->getMuralbyId('d353cead-f22b-43f8-8c23-65f1800c29b5')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-11 23:45:35 --> ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «AS»
+LINE 5: ...               ARRAY_AGG(DISTINCT (vid.url_video) AS videos,
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), '\r\n            S...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('\r\n            S...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(75): CodeIgniter\Database\BaseConnection->query('\r\n            S...', Array)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(220): App\Models\Mural_Model->getMuralbyId('d353cead-f22b-4...')
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-11 23:45:35 --> pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «AS»
+LINE 5: ...               ARRAY_AGG(DISTINCT (vid.url_video) AS videos,
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «AS»
+LINE 5: ...               ARRAY_AGG(DISTINCT (vid.url_video) AS videos,
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), '
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT (vid.url_video) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT (vid.url_video) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT (vid.url_video) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = \'d353cead-f22b-43f8-8c23-65f1800c29b5\'
+            GROUP BY
+                mur.id_mural
+        ')
+ 5 APPPATH\Models\Mural_Model.php(75): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                mur.*,
+                ARRAY_AGG(DISTINCT txt.valor) AS txts,
+                ARRAY_AGG(DISTINCT (vid.url_video) AS videos,
+                ARRAY_AGG(DISTINCT img.url) AS imagenes,
+                ARRAY_AGG(DISTINCT pdfs.url_pdfs) AS pdfs
+            FROM
+                mural AS mur
+            LEFT JOIN
+                txt ON mur.id_mural = txt.id_mural
+            LEFT JOIN
+                videos AS vid ON mur.id_mural = vid.id_mural
+            LEFT JOIN
+                imagenes AS img ON mur.id_mural = img.id_mural
+            LEFT JOIN
+                pdfs ON mur.id_mural = pdfs.id_mural
+            WHERE
+                mur.id_mural = ?
+            GROUP BY
+                mur.id_mural
+        ', [...])
+ 6 APPPATH\Controllers\MuralController.php(220): App\Models\Mural_Model->getMuralbyId('d353cead-f22b-43f8-8c23-65f1800c29b5')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:47:15 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 227.
+ 1 APPPATH\Controllers\MuralController.php(227): array_map(Object(Closure), '{"C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/videos/video_64d43107b2c98.mp4"}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-11 23:49:56 --> array_map(): Argument #2 ($array) must be of type array, string given
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): array_map(Object(Closure), '{Anuncios,Tutoriales}')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

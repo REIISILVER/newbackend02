@@ -1,0 +1,302 @@
+ERROR - 2023-08-06 00:00:22 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect() in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "usuario...', Array, false)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(17): CodeIgniter\BaseModel->first()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\loggin.php(26): App\Models\user_model->getUserByEmail('brylo1@outlook....')
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-06 00:00:22 --> Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect()
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "usuario".*, "rol"."perfil" as "perfil"
+FROM "usuario"
+INNER JOIN "rol" ON "rol"."id_rol" = "usuario"."id_rol"
+WHERE "email" = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\user_model.php(17): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\loggin.php(26): App\Models\user_model->getUserByEmail('brylo1@outlook.com')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 01:40:13 --> Unsupported operand types: string * int
+in APPPATH\Controllers\MuralController.php on line 65.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 02:37:42 --> Class "Cloudinary\Uploader" not found
+in APPPATH\Controllers\MuralController.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 02:48:55 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(3d79e1c3-686c-4969-b059-ef4157d98937). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(38): App\Models\Mural_Model->insertMural(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-06 02:48:55 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(3d79e1c3-686c-4969-b059-ef4157d98937).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(3d79e1c3-686c-4969-b059-ef4157d98937).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'3d79e1c3-686c-4969-b059-ef4157d98937\', \'1\', 1049, 400, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'3d79e1c3-686c-4969-b059-ef4157d98937\', \'1\', 1049, 400, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'3d79e1c3-686c-4969-b059-ef4157d98937\', \'1\', 1049, 400, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\MuralController.php(38): App\Models\Mural_Model->insertMural([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 02:50:59 --> Invalid configuration, please set up your environment
+in FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php on line 293.
+ 1 FCPATH\vendor\cloudinary\cloudinary_php\src\Cloudinary.php(59): Cloudinary\Configuration\Configuration->validate()
+ 2 APPPATH\Controllers\MuralController.php(68): Cloudinary\Cloudinary->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 20:00:55 --> Class "Config\Cloudinary" not found
+in APPPATH\Controllers\MuralController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 20:05:49 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(39): App\Models\Mural_Model->insertMural(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-06 20:05:49 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\MuralController.php(39): App\Models\Mural_Model->insertMural([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 20:08:06 --> Class "Config\Cloudinary" not found
+in APPPATH\Controllers\MuralController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 20:19:03 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(38): App\Models\Mural_Model->insertMural(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-06 20:19:03 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\MuralController.php(38): App\Models\Mural_Model->insertMural([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 20:19:37 --> Class "Config\Cloudinary" not found
+in APPPATH\Controllers\MuralController.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 20:22:34 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(38): App\Models\Mural_Model->insertMural(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-06 20:22:34 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(014ed103-1a5a-4be1-8c68-2eed1aab7185).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'014ed103-1a5a-4be1-8c68-2eed1aab7185\', \'1\', 1049, 400, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\MuralController.php(38): App\Models\Mural_Model->insertMural([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 20:22:56 --> Class "Config\Cloudinary" not found
+in APPPATH\Controllers\MuralController.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 20:33:02 --> Class "Config\Cloudinary" not found
+in APPPATH\Controllers\MuralController.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 20:48:03 --> Invalid configuration, please set up your environment
+in FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php on line 179.
+ 1 FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php(138): Cloudinary\Configuration\Configuration->import(Object(Config\Cloudinary))
+ 2 FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php(119): Cloudinary\Configuration\Configuration->init(Object(Config\Cloudinary), true)
+ 3 FCPATH\vendor\cloudinary\cloudinary_php\src\Cloudinary.php(58): Cloudinary\Configuration\Configuration->__construct(Object(Config\Cloudinary))
+ 4 APPPATH\Controllers\MuralController.php(71): Cloudinary\Cloudinary->__construct(Object(Config\Cloudinary))
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 21:00:20 --> Invalid configuration, please set up your environment
+in FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php on line 179.
+ 1 FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php(138): Cloudinary\Configuration\Configuration->import(Object(Config\Cloudinary))
+ 2 FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php(119): Cloudinary\Configuration\Configuration->init(Object(Config\Cloudinary), true)
+ 3 FCPATH\vendor\cloudinary\cloudinary_php\src\Cloudinary.php(58): Cloudinary\Configuration\Configuration->__construct(Object(Config\Cloudinary))
+ 4 APPPATH\Controllers\MuralController.php(71): Cloudinary\Cloudinary->__construct(Object(Config\Cloudinary))
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 21:26:50 --> Invalid configuration, please set up your environment
+in FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php on line 179.
+ 1 FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php(138): Cloudinary\Configuration\Configuration->import(Object(Config\Cloudinary))
+ 2 FCPATH\vendor\cloudinary\cloudinary_php\src\Configuration\Configuration.php(119): Cloudinary\Configuration\Configuration->init(Object(Config\Cloudinary), true)
+ 3 FCPATH\vendor\cloudinary\cloudinary_php\src\Cloudinary.php(58): Cloudinary\Configuration\Configuration->__construct(Object(Config\Cloudinary))
+ 4 APPPATH\Controllers\MuralController.php(71): Cloudinary\Cloudinary->__construct(Object(Config\Cloudinary))
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 21:53:29 --> base64_decode(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\MuralController.php on line 68.
+ 1 APPPATH\Controllers\MuralController.php(68): base64_decode([])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 22:10:11 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(66f25883-06c5-4003-a0f0-9bcff882e426). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mu...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mu...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mu...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mu...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(39): App\Models\Mural_Model->insertMural(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-06 22:10:11 --> pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(66f25883-06c5-4003-a0f0-9bcff882e426).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «mural_pkey»
+DETAIL:  Ya existe la llave (id_mural)=(66f25883-06c5-4003-a0f0-9bcff882e426).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'66f25883-06c5-4003-a0f0-9bcff882e426\', \'1\', 1049, 400, \'en espera\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'66f25883-06c5-4003-a0f0-9bcff882e426\', \'1\', 1049, 400, \'en espera\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (\'66f25883-06c5-4003-a0f0-9bcff882e426\', \'1\', 1049, 400, \'en espera\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "mural" ("id_mural", "id_user", "height", "width", "estado") VALUES (:id_mural:, :id_user:, :height:, :width:, :estado:)', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(31): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\MuralController.php(39): App\Models\Mural_Model->insertMural([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 22:11:00 --> file_get_contents(): Argument #1 ($filename) must be of type string, array given
+in APPPATH\Controllers\MuralController.php on line 66.
+ 1 APPPATH\Controllers\MuralController.php(66): file_get_contents([])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 23:15:15 --> base64_decode(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\MuralController.php on line 69.
+ 1 APPPATH\Controllers\MuralController.php(69): base64_decode([])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 23:17:01 --> Undefined array key "file"
+in APPPATH\Controllers\MuralController.php on line 69.
+ 1 APPPATH\Controllers\MuralController.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 69)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 23:27:26 --> json_decode(): Argument #1 ($json) must be of type string, array given
+in APPPATH\Controllers\MuralController.php on line 67.
+ 1 APPPATH\Controllers\MuralController.php(67): json_decode([], true)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 23:35:52 --> Class "App\Controllers\ResponseInterface" not found
+in APPPATH\Controllers\MuralController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

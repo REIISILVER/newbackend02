@@ -1,0 +1,203 @@
+ERROR - 2023-07-30 04:16:20 --> ErrorException: pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'SELECT "mur"."i...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT "mur"."i...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "mur"."i...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(60): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(122): App\Models\Mural_Model->getMuralsbyEdit(1)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->EditMural()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-30 04:16:20 --> pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 1')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 1')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = :mur.id_user:', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\MuralController.php(122): App\Models\Mural_Model->getMuralsbyEdit(1)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->EditMural()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-30 04:16:35 --> ErrorException: pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT "mur"."i...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT "mur"."i...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "mur"."i...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(60): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(122): App\Models\Mural_Model->getMuralsbyEdit(1)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->EditMural()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-30 04:16:35 --> pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 1')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 1')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = :mur.id_user:', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\MuralController.php(122): App\Models\Mural_Model->getMuralsbyEdit(1)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->EditMural()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-30 04:16:39 --> ErrorException: pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #11, 'SELECT "mur"."i...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT "mur"."i...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "mur"."i...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(60): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(122): App\Models\Mural_Model->getMuralsbyEdit(3)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->EditMural()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-30 04:16:39 --> pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  falta una entrada para la tabla «us» en la cláusula FROM
+LINE 1: ...d_mural&quot;, &quot;mur&quot;.&quot;id_user&quot;, &quot;mur&quot;.&quot;estado&quot;, CONCAT(us.nombre,...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 3')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = 3')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "mur"."id_user", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+JOIN "imagenes" "img" ON "img"."id_mural" = "mur"."id_mural"
+JOIN "videos" "vid" ON "vid"."id_mural" = "mur"."id_mural"
+JOIN "pdfs" "pdf" ON "pdf"."id_mural" = "mur"."id_mural"
+WHERE "mur"."id_user" = :mur.id_user:', [...], false)
+ 6 APPPATH\Models\Mural_Model.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\MuralController.php(122): App\Models\Mural_Model->getMuralsbyEdit(3)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->EditMural()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-30 22:15:57 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «posx» de la relación «txt» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (27, &quot;Times New Roman&quot;, 18px, null, null, 80, 200, null, Titulo de ejemplo desde el angular, null, null, rgb(165, 165, 184), null, justify, null, null). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Resource id #12, 'INSERT INTO "tx...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tx...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tx...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tx...', NULL, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\TextoModel.php(27): CodeIgniter\BaseModel->insertBatch(Array, NULL, 100, false)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(55): App\Models\TextoModel->insertBatch(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->create()
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-07-30 22:15:58 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «posx» de la relación «txt» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (27, &quot;Times New Roman&quot;, 18px, null, null, 80, 200, null, Titulo de ejemplo desde el angular, null, null, rgb(165, 165, 184), null, justify, null, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor nulo en la columna «posx» de la relación «txt» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (27, &quot;Times New Roman&quot;, 18px, null, null, 80, 200, null, Titulo de ejemplo desde el angular, null, null, rgb(165, 165, 184), null, justify, null, null).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(resource (pgsql link persistent), 'INSERT INTO "txt"("color", "font", "font_size", "height", "sangria", "valor", "width")
+VALUES (\'rgb(165, 165, 184)\',\'"Times New Roman"\',\'18px\',80,\'justify\',\'Titulo de ejemplo desde el angular\',200)
+')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "txt"("color", "font", "font_size", "height", "sangria", "valor", "width")
+VALUES (\'rgb(165, 165, 184)\',\'"Times New Roman"\',\'18px\',80,\'justify\',\'Titulo de ejemplo desde el angular\',200)
+')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "txt"("color", "font", "font_size", "height", "sangria", "valor", "width")
+VALUES (\'rgb(165, 165, 184)\',\'"Times New Roman"\',\'18px\',80,\'justify\',\'Titulo de ejemplo desde el angular\',200)
+')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO "txt"("color", "font", "font_size", "height", "sangria", "valor", "width")
+VALUES (\'rgb(165, 165, 184)\',\'"Times New Roman"\',\'18px\',80,\'justify\',\'Titulo de ejemplo desde el angular\',200)
+', null, false)
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 7 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 8 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 9 APPPATH\Models\TextoModel.php(27): CodeIgniter\BaseModel->insertBatch([...], null, 100, false)
+10 APPPATH\Controllers\MuralController.php(55): App\Models\TextoModel->insertBatch([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->create()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

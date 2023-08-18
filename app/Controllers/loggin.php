@@ -29,8 +29,10 @@ class loggin extends BaseController
             // Las credenciales son válidas, generar el token de acceso
             $token = $this->generateToken($user['id_user'], $user['email'], $user['perfil']);
 
+
+
             // Devolver la respuesta con el token
-            return $this->respond(['token' => $token], 200);
+            return $this->respond(['token' => $token ,"id_user"=>$user['id_user']], 200);
         } else {
             // Las credenciales son inválidas, devolver un error
             return $this->failUnauthorized('Credenciales inválidas');

@@ -1,0 +1,84 @@
+CRITICAL - 2023-08-14 03:32:22 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 238.
+ 1 APPPATH\Controllers\MuralController.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 238)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:32:47 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 238.
+ 1 APPPATH\Controllers\MuralController.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 238)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:33:42 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 238.
+ 1 APPPATH\Controllers\MuralController.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 238)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:51:55 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 239.
+ 1 APPPATH\Controllers\MuralController.php(239): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 239)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:54:24 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 239.
+ 1 APPPATH\Controllers\MuralController.php(239): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 239)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:56:02 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 240.
+ 1 APPPATH\Controllers\MuralController.php(240): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 240)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:56:28 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 240.
+ 1 APPPATH\Controllers\MuralController.php(240): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 240)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:56:45 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 240.
+ 1 APPPATH\Controllers\MuralController.php(240): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 240)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 03:57:40 --> Undefined array key 20
+in APPPATH\Controllers\MuralController.php on line 329.
+ 1 APPPATH\Controllers\MuralController.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 329)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 04:00:25 --> Undefined array key 20
+in APPPATH\Controllers\MuralController.php on line 329.
+ 1 APPPATH\Controllers\MuralController.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 329)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 04:01:48 --> Undefined array key 20
+in APPPATH\Controllers\MuralController.php on line 329.
+ 1 APPPATH\Controllers\MuralController.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 329)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-14 04:02:40 --> Undefined array key 20
+in APPPATH\Controllers\MuralController.php on line 329.
+ 1 APPPATH\Controllers\MuralController.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 329)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

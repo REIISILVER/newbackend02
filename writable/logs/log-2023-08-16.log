@@ -1,0 +1,18 @@
+CRITICAL - 2023-08-16 22:39:54 --> Undefined array key "fontweight"
+in APPPATH\Controllers\MuralController.php on line 401.
+ 1 APPPATH\Controllers\MuralController.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fontweight"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 401)
+ 2 [internal function]: App\Controllers\MuralController->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\MuralController.php(387): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 22:43:23 --> Undefined array key "fontweight"
+in APPPATH\Controllers\MuralController.php on line 401.
+ 1 APPPATH\Controllers\MuralController.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fontweight"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 401)
+ 2 [internal function]: App\Controllers\MuralController->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\MuralController.php(387): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

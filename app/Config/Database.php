@@ -20,16 +20,43 @@ class Database extends Config
      * use if no other is specified.
      */
     public string $defaultGroup = 'default';
+/*g4tHZUMorC1t_XSZ1If8a_sjnzjAiKgc
+ *Server	silly.db.elephantsql.com (silly-01)
+Region	amazon-web-services::sa-east-1
+Created at	2023-08-18 20:37 UTC+00:00
+User & Default database:	khohrezb
+ *
+ *
+ * */
+   /* public array $default = [
+        'DSN'      => '',
+        'hostname' => 'localhost',
+        'username' => 'postgres',
+        'password' => 'root',
+        'database' => 'mural2',
+        'DBDriver' => 'Postgre',
+        'DBPrefix' => '',
+        'pConnect' => true,
+        'DBDebug'  => (ENVIRONMENT == 'production'),
+        'charset'  => 'utf8',
+        'DBCollat' => 'Spanish_Spain.1252',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 5432,
+    ];*/
 
     /**
      * The default database connection.
      */
     public array $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => 'postgres',
-        'password' => 'root',
-        'database' => 'mural2',
+        'hostname' => 'silly.db.elephantsql.com',
+        'username' => 'khohrezb',
+        'password' => 'g4tHZUMorC1t_XSZ1If8a_sjnzjAiKgc',
+        'database' => 'khohrezb',
         'DBDriver' => 'Postgre',
         'DBPrefix' => '',
         'pConnect' => true,

@@ -1,0 +1,74 @@
+CRITICAL - 2023-08-12 20:53:14 --> Call to undefined function App\Controllers\debug()
+in APPPATH\Controllers\MuralController.php on line 230.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 21:56:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\MuralController.php on line 238.
+ 1 APPPATH\Controllers\MuralController.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 238)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 22:12:40 --> Unsupported operand types: string + string
+in APPPATH\Controllers\MuralController.php on line 245.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 22:12:57 --> Unsupported operand types: string + string
+in APPPATH\Controllers\MuralController.php on line 245.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 22:15:42 --> Undefined array key 20
+in APPPATH\Controllers\MuralController.php on line 250.
+ 1 APPPATH\Controllers\MuralController.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 22:16:00 --> Undefined array key 20
+in APPPATH\Controllers\MuralController.php on line 250.
+ 1 APPPATH\Controllers\MuralController.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 22:20:00 --> Undefined array key 20
+in APPPATH\Controllers\MuralController.php on line 250.
+ 1 APPPATH\Controllers\MuralController.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 20', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 250)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 22:24:05 --> Undefined array key 9
+in APPPATH\Controllers\MuralController.php on line 245.
+ 1 APPPATH\Controllers\MuralController.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 9', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 245)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 22:24:26 --> Undefined array key 1
+in APPPATH\Controllers\MuralController.php on line 237.
+ 1 APPPATH\Controllers\MuralController.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 237)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 23:12:52 --> explode(): Argument #1 ($separator) cannot be empty
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): explode('', '(37,Georgia,20px,256,177,75,250,5b3e7c0f-9d32-4bec-91f5-dbcdc4cc8f76,\\"Arte de la semana\\",\\"rgb(255, 255, 255)\\",solid,\\"rgb(250, 250, 250)\\",,center,\\"rgb(40, 122, 109)\\",1%)')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-12 23:13:36 --> explode(): Argument #1 ($separator) cannot be empty
+in APPPATH\Controllers\MuralController.php on line 233.
+ 1 APPPATH\Controllers\MuralController.php(233): explode('', '(37,Georgia,20px,256,177,75,250,5b3e7c0f-9d32-4bec-91f5-dbcdc4cc8f76,\\"Arte de la semana\\",\\"rgb(255, 255, 255)\\",solid,\\"rgb(250, 250, 250)\\",,center,\\"rgb(40, 122, 109)\\",1%)')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getMuralbyId()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

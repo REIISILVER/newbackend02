@@ -43,9 +43,11 @@ class Autoload extends AutoloadConfig
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
         'CodeIgniter\\Database\\pgsql' => APPPATH . 'Database/Postgre',
+        'Cloudinary' => ROOTPATH . 'vendor/cloudinary/cloudinary_php/src',
     ];
 
     /**
+     *
      * -------------------------------------------------------------------
      * Class Map
      * -------------------------------------------------------------------
