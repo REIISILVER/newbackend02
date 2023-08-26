@@ -8,7 +8,7 @@ class Mural_Model extends Model
 {
     protected $table = 'mural'; // Nombre de la tabla
     protected $primaryKey = 'id_mural'; // Nombre de la clave primaria
-    protected $allowedFields = ['id_mural', 'id_user', 'height', 'width', 'estado','nombrem']; // Campos permitidos para inserción masiva
+    protected $allowedFields = ['id_mural', 'id_user', 'height', 'width', 'estado', 'nombrem']; // Campos permitidos para inserción masiva
 
     protected $returnType = 'array'; // Tipo de datos de retorno, en este caso un arreglo
     protected $useTimestamps = false; // No usar timestamps (created_at, updated_at)
@@ -36,11 +36,12 @@ class Mural_Model extends Model
         return $this->select('id_mural')
             ->findAll(); // Obtener todos los id_mural de la tabla
     }
+
     //devuelve las solicitudes
     public function getSolicitudData()
     {
         $builder = $this->db->table('mural mur');
-        $builder->select('mur.id_mural, us.id_user, mur.estado, CONCAT(us.nombre,us.apellido_p) as Diseñador, sol.fecha_solicitud');
+        $builder->select('mur.id_mural,us.id_user,mur.nombrem ,mur.estado, CONCAT(us.nombre,us.apellido_p) as Diseñador, sol.fecha_solicitud');
         $builder->join('usuario us', 'us.id_user = mur.id_user', 'inner');
         $builder->join('solicitar sol', 'sol.id_mural = mur.id_mural', 'inner');
 
@@ -49,8 +50,22 @@ class Mural_Model extends Model
         return $query->getResultArray();
     }
 
+    //solicitud por ID
+    public function getSolicitudById($idUser)
+    {
+        $builder = $this->db->table('mural mur');
+        $builder->select('mur.id_mural,mur.nombrem ,us.id_user, mur.estado, CONCAT(us.nombre,us.apellido_p) as Diseñador, sol.fecha_solicitud');
+        $builder->join('usuario us', 'us.id_user = mur.id_user', 'inner');
+        $builder->join('solicitar sol', 'sol.id_mural = mur.id_mural', 'inner');
+        $builder->where('mur.id_user', $idUser);
+        $query = $builder->get();
+
+        return $query->getResultArray();
+    }
+
     //obtener los murales por ID
-    public function getMuralbyId($idMural){
+    public function getMuralbyId($idMural)
+    {
         $query = $this->db->query("
             SELECT
                 mur.*,
@@ -76,6 +91,7 @@ class Mural_Model extends Model
 
         return $query->getResultArray();
     }
+
     //obtener el id del usuario para mostrar los murales de ese usuario
     public function getMuralByUser($idUsuario)
     {
@@ -104,7 +120,6 @@ class Mural_Model extends Model
 
         return $query->getResultArray();
     }
-
 
 
 }

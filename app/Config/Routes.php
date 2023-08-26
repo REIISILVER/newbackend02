@@ -39,6 +39,9 @@ $routes->post('login','loggin::loginOn');
 $routes->get('mural/getId','MuralController::getIdMurals');
 //ruta para obtener las solicitudes
 $routes->get('mural/solicitudes','MuralController::getSolicitud');
+//ruta para pasar id del user y que devuelva las solicitudes solo de ese usuario
+$routes->post('mural/solbyuser','MuralController::solicitudByIdUser');
+
 //rutas que va recibir los post del frontend
 // ruta para guardar los murales
 $routes->post('mural/insert','MuralController::create');
@@ -46,6 +49,11 @@ $routes->post('mural/insert','MuralController::create');
 $routes->post('mural/dashboard','MuralController::EditMural');
 //ruta que recibe un idMural para editar el mural
 $routes->post('mural/edit','MuralController::getMuralbyId');
+//rutas para actualizar rechazar
+$routes->patch('mural/aprobar','MuralController::updateEstado');
+$routes->patch('mural/rechazar','MuralController::rechazar');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

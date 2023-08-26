@@ -1,0 +1,21 @@
+CRITICAL - 2023-08-26 17:40:19 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray('aprobado', 'update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], 'aprobado')
+ 3 APPPATH\Controllers\MuralController.php(480): CodeIgniter\Model->update('d353cead-f22b-43f8-8c23-65f1800c29b5', 'aprobado')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateEstado()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-26 21:32:03 --> Class "APP\Models\PublicarModel" not found
+in APPPATH\Controllers\MuralController.php on line 483.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateEstado()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-26 21:33:51 --> Class "APP\Models\publicarModel" not found
+in APPPATH\Controllers\MuralController.php on line 483.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateEstado()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

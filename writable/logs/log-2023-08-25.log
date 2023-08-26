@@ -1,0 +1,24 @@
+CRITICAL - 2023-08-25 20:21:14 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-25 20:21:55 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-25 20:34:27 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-25 20:34:59 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-25 20:37:09 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-25 20:37:25 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-25 20:37:35 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-25 20:39:50 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Models\Mural_Model.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

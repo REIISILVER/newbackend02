@@ -7,6 +7,7 @@ use App\Models\TextoModel;
 use App\Models\ImagenModel;
 use App\Models\VideoModel;
 use App\Models\PdfModel;
+use App\Models\publicarModel;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\SolicitarModel;
 use Cloudinary\Cloudinary;
@@ -176,6 +177,19 @@ class MuralController extends ResourceController
         return $this->response->setJSON($muralData);
     }
 
+    public function solicitudByIdUser(){
+        $request = $this->request->getJSON(true);
+        if (empty($request)) {
+            return $this->fail('Invalid JSON data', 400);
+        }
+        $id_user = $request['id_user'];
+        $muralModel = new Mural_Model();
+        $muralData = $muralModel->getSolicitudById($id_user);
+
+        return $this->response->setJSON($muralData);
+
+    }
+
     //para editar mural
     public function EditMural(){
         $request = $this->request->getJSON(true);
@@ -242,7 +256,7 @@ class MuralController extends ResourceController
 
         }
 
-        $randomizera = "\\\"C:\\\\\\\\wamp64\\\\\\\\www\\\\\\\\codeigniter4-framework-5d3d4b2\\\\\\\\recursos/videos/video_64d43107b2c98.mp4\\\"";
+
 
         //my_dump( decodeFilePath($randomizera));
 
@@ -446,6 +460,78 @@ class MuralController extends ResourceController
         return $this->response->setJSON($muralData);
 
     }
+    //update del estado del mural dependiendo si es , aceptado o rechazado
+    public function updateEstado(){
+        $MuralModel = new Mural_Model();
+
+        $request = $this->request->getJSON(true);
+
+        if (empty($request)) {
+            return $this->fail('Invalid JSON data', 400);
+        }
+
+        // Obtener datos principales del mural
+        $muralData = [
+            'id_mural' => $request['id_mural'],
+            'id_user' => $request['id_user'],
+            'estado' => $request['estado']
+
+        ];
+
+
+        $MuralModel->update($muralData['id_mural'], $muralData);
+        $publicarData = new publicarModel();
+        $publicarAr = [
+          'id_mural'=>$request['id_mural'],
+          'id_user' =>$request['id_user'],
+          'fecha_publicacion' =>$request['fecha_publicacion'],
+          'fin_publicacion' =>$request['fin_publicacion']
+        ];
+        $publicarData->insertPublicacion($publicarAr);//insertamos la publicacion
+
+        $rep = [
+          'mensaje'=>'actualización de estado exitosamente'
+        ];
+
+
+
+        return $this->response->setJSON($rep);
+
+    }
+
+    public  function rechazar(){
+        $MuralModel = new Mural_Model();
+
+        $request = $this->request->getJSON(true);
+
+        if (empty($request)) {
+            return $this->fail('Invalid JSON data', 400);
+        }
+
+        // Obtener datos principales del mural
+        $muralData = [
+            'id_mural' => $request['id_mural'],
+            'id_user' => $request['id_user'],
+            'estado' => $request['estado']
+
+        ];
+
+
+        $MuralModel->update($muralData['id_mural'], $muralData);
+        $rep = [
+            'mensaje'=>'actualización de estado exitosamente'
+        ];
+        return $this->response->setJSON($rep);
+
+    }
+
+
+    //update de la tabla mural y lo que contenga
+    public function updateMural(){
+
+    }
 }
+
+
 
 
