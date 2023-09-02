@@ -344,10 +344,10 @@ class MuralController extends ResourceController
             //obtener los datos de la tabla txts
             $txts = [];
             if ($row['txts']!= '{NULL}') {
-            $txtValues = explode('","', substr($row['txts'], 2, -2)); // Remove leading and trailing "{" and "}"
+            $txtValues = explode('","', substr($row['txts'], 2, -2)); // Remueve "{" and "}"
             foreach ($txtValues as $txtValue) {
                 $txtArray = explode(',', $txtValue);
-                
+                //my_dump($txtArray);
                 $txts[] = [
                     'id_txt' => $txtArray[0],
                     'font' => $txtArray[1],
@@ -511,7 +511,6 @@ class MuralController extends ResourceController
         // Obtener datos principales del mural
         $muralData = [
             'id_mural' => $request['id_mural'],
-            'id_user' => $request['id_user'],
             'estado' => $request['estado']
 
         ];
@@ -528,6 +527,146 @@ class MuralController extends ResourceController
 
     //update de la tabla mural y lo que contenga
     public function updateMural(){
+        $request = $this->request->getJSON(true);
+
+        if (empty($request)) {
+            return $this->fail('Invalid JSON data', 400);
+        }
+
+        // Obtener datos principales del mural
+        $muralData = [
+            'id_mural' => $request['id_mural'],
+            'id_user' => $request['id_user'],
+            'height' => $request['height'],
+            'width' => $request['width'],
+            'estado' => $request['estado'],
+            'nombrem' => $request['nombrem']
+        ];
+
+        // actualizar datos del mural en la tabla 'mural'
+        $muralModel = new Mural_Model();
+        $muralModel->update($muralData['id_mural'], $muralData);
+
+
+        // Obtener datos de textos, imágenes, videos y pdfs
+        $textos = $request['textos'] ?? [];
+        $imagenes = $request['imagenes'] ?? [];
+        $videos = $request['videos'] ?? [];
+        $pdfs = $request['pdfs'] ?? [];
+
+
+
+        // Guardar datos de textos en la tabla 'txt'
+        if (!empty($textos)) {
+
+            $textoModel = new TextoModel();
+            foreach ($textos as $texto) {
+                if (isset($texto['id_txt'])) {
+                    // Si el texto tiene un ID, actualízalo
+                    $textoModel->update($texto['id_txt'], $texto);
+                } else {
+                    // Si no tiene un ID, inserta un nuevo registro
+                    $textoModel->insert($texto);
+                }
+            }
+
+
+        }
+
+        // Guardar datos de imágenes en la tabla 'imagenes'
+        if (!empty($imagenes)) {
+            $imagenModel = new ImagenModel();
+            foreach ($imagenes as $imagen) {
+                // Extraer la extensión del archivo de la URL
+                //$extension = pathinfo($imagen['url'], PATHINFO_EXTENSION);
+                //$fileContent = file_get_contents($imagen['file']);
+
+                // Eliminar el prefijo "data:image/jpeg;base64," y obtener solo los datos codificados en Base64
+                $base64Data = str_replace('data:image/jpeg;base64,', '', $imagen['url']);
+
+                $filename = 'imagen' . uniqid() .'.jpg'; // Nombre del archivo en el servidor con un ID único
+                $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
+
+
+                file_put_contents($filePath, base64_decode($base64Data));
+
+                $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+
+            }
+
+            // Insertar las referencias de pdfs en la tabla 'img'
+            if (!empty($imagenReferences)) {
+                $imagenModel->update($imagenReferences['id_mural'],$imagenReferences);
+            }
+
+        }
+
+
+
+
+        // Guardar datos de videos en la tabla 'videos'
+        if (!empty($videos)) {
+            $videoModel = new VideoModel();
+            foreach ($videos as $video) {
+                //extraer la ruta
+                //$extension = pathinfo($video['url_video'], PATHINFO_EXTENSION);
+
+                $base64Data = str_replace('data:video/mp4;base64,', '', $video['url_video']);
+                $filename = 'video_' . uniqid() .'.mp4'; // Nombre del archivo en el servidor con un ID único
+                $filePath = FCPATH  . 'recursos/videos/' . $filename;
+                file_put_contents($filePath, base64_decode( $base64Data));
+                $videoReferences[] = ['url_video' => $filePath, 'height' => $video['height'], 'width' => $video['width'], 'posx' => $video['posx'], 'posy' => $video['posy'],'formato'=>$video['formato'],'duracion'=>$video['duration'], 'id_mural' => $video['id_mural'], 'border_color' => $video['border_color'], 'border_style' => $video['border_style'], 'border_radius' => $video['border_radius']]; // Guardar ademas la referencia en el array $videoReferences
+            }
+
+            // Insertar las referencias de pdfs en la tabla 'pdfs'
+            if (!empty($videoReferences)) {
+                $videoModel->update($videoReferences['id_mural'],$videoReferences);
+            }
+
+
+        }
+
+        // Guardar datos de pdfs en la tabla 'pdfs'
+        if (!empty($pdfs)) {
+            $pdfModel = new PdfModel();
+
+            foreach ($pdfs as $pdf) {
+                // Eliminar el prefijo "data:application/pdf;base64," y obtener solo los datos codificados en Base64
+                $base64Data = str_replace('data:application/pdf;base64,', '', $pdf['url_pdfs']);
+                $filename = 'pdf_' . uniqid() . '.pdf'; // Nombre del archivo en el servidor con un ID único
+                $filePath = FCPATH  . 'recursos/pdfs/' . $filename;
+                file_put_contents($filePath, base64_decode($base64Data));
+                $pdfReferences[] = ['url_pdfs' => $filePath, 'height' => $pdf['height'], 'width' => $pdf['width'], 'posx' => $pdf['posx'], 'posy' => $pdf['posy'], 'id_mural' => $pdf['id_mural'], 'border_color' => $pdf['border_color'], 'border_style' => $pdf['border_style'], 'border_radius' => $pdf['border_radius']]; // Guardar ademas la referencia en el array $pdfReferences
+            }
+
+            // Insertar las referencias de pdfs en la tabla 'pdfs'
+            if (!empty($pdfReferences)) {
+                $pdfModel->update($pdfReferences['id_mural'],$pdfReferences);
+            }
+
+
+        }
+
+        // Guardar los datos en la tabla "solicitar"
+        $solicitarModel = new SolicitarModel(); // Instanciar el modelo SolicitarModel
+        $solicitarData = [
+            'id_mural' => $muralData['id_mural'],
+            'id_disenador' => $muralData['id_user'],
+            'id_editor' => 2,
+
+        ];
+        //Guardar la solicitud
+        $solicitarModel->insertSolicitud($solicitarData); // Insertar los datos en la tabla "solicitar"
+
+        $resp = [
+            'mensaje'=>'Mural actuaizado con exito'
+        ];
+
+
+        return $this->response->setJSON('Mural Actualizado con exito');
+
+
+
 
     }
 }
