@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class PdfModel extends Model
 {
     protected $table = 'pdfs';
-    protected $primaryKey = 'id_pdf';
+    protected $primaryKey = 'id_pdfs';
     protected $allowedFields = ['url_pdfs', 'posx', 'posy', 'height', 'width', 'border_color', 'border_style', 'border_radius', 'id_mural'];
 
     protected $returnType = 'array';

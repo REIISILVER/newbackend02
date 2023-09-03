@@ -121,5 +121,27 @@ class Mural_Model extends Model
         return $query->getResultArray();
     }
 
+    //funcion que devuelve una querry con todos los murales aprobados
+    public function obtenerMuralesAprobados()
+    {
+        $builder = $this->db->table('mural as mur');
+        $builder->select('mur.*, publicar.fecha_publicacion as fecha_publicacion, publicar.fin_publicacion as fin_publicacion');
+        $builder->select('ARRAY_AGG(DISTINCT txt.*) AS txts');
+        $builder->select('ARRAY_AGG(DISTINCT vid.*) AS videos');
+        $builder->select('ARRAY_AGG(DISTINCT img.*) AS imagenes');
+        $builder->select('ARRAY_AGG(DISTINCT pdfs.*) AS pdfs');
+        $builder->join('txt', 'mur.id_mural = txt.id_mural', 'left');
+        $builder->join('videos AS vid', 'mur.id_mural = vid.id_mural', 'left');
+        $builder->join('imagenes AS img', 'mur.id_mural = img.id_mural', 'left');
+        $builder->join('pdfs', 'mur.id_mural = pdfs.id_mural', 'left');
+        $builder->join('publicar', 'mur.id_mural = publicar.id_mural', 'left');
+        $builder->where('mur.estado', 'aprobado');
+        $builder->groupBy('mur.id_mural, publicar.fecha_publicacion, publicar.fin_publicacion');
+
+        $query = $builder->get();
+
+        return $query->getResultArray();
+    }
+
 
 }

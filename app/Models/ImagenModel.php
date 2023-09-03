@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ImagenModel extends Model
 {
     protected $table = 'imagenes';
-    protected $primaryKey = 'id_imagen';
+    protected $primaryKey = 'id_imagenes';
     protected $allowedFields = ['url', 'height', 'width', 'posx', 'posy', 'alt', 'border_color', 'border_style', 'border_radius', 'id_mural'];
 
     protected $returnType = 'array';

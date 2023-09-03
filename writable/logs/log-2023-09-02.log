@@ -1,0 +1,262 @@
+ERROR - 2023-09-02 16:53:11 --> ErrorException: pg_query(): Query failed: ERROR:  column pdfs.id_pdf does not exist
+LINE 2: WHERE &quot;pdfs&quot;.&quot;id_pdf&quot; IN ('18')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;pdfs.id_pdfs&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "pdfs" S...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "pdfs" S...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "pdfs" S...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "pdfs" S...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(647): CodeIgniter\Model->update('18', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-02 16:53:12 --> pg_query(): Query failed: ERROR:  column pdfs.id_pdf does not exist
+LINE 2: WHERE &quot;pdfs&quot;.&quot;id_pdf&quot; IN ('18')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;pdfs.id_pdfs&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pdfs.id_pdf does not exist
+LINE 2: WHERE &quot;pdfs&quot;.&quot;id_pdf&quot; IN (\'18\')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;pdfs.id_pdfs&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "pdfs" SET "url_pdfs" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/pdfs/pdf_64d43107ba5b1.pdf\', "posx" = \'1050\', "posy" = \'204\', "height" = \'323\', "width" = \'298\', "id_mural" = \'d353cead-f22b-43f8-8c23-65f1800c29b5\', "border_color" = \'rgb(255, 255, 255)\', "border_style" = \'solid\', "border_radius" = \'1%\'
+WHERE "pdfs"."id_pdf" IN (\'18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "pdfs" SET "url_pdfs" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/pdfs/pdf_64d43107ba5b1.pdf\', "posx" = \'1050\', "posy" = \'204\', "height" = \'323\', "width" = \'298\', "id_mural" = \'d353cead-f22b-43f8-8c23-65f1800c29b5\', "border_color" = \'rgb(255, 255, 255)\', "border_style" = \'solid\', "border_radius" = \'1%\'
+WHERE "pdfs"."id_pdf" IN (\'18\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "pdfs" SET "url_pdfs" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/pdfs/pdf_64d43107ba5b1.pdf\', "posx" = \'1050\', "posy" = \'204\', "height" = \'323\', "width" = \'298\', "id_mural" = \'d353cead-f22b-43f8-8c23-65f1800c29b5\', "border_color" = \'rgb(255, 255, 255)\', "border_style" = \'solid\', "border_radius" = \'1%\'
+WHERE "pdfs"."id_pdf" IN (\'18\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "pdfs" SET "url_pdfs" = :url_pdfs:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "id_mural" = :id_mural:, "border_color" = :border_color:, "border_style" = :border_style:, "border_radius" = :border_radius:
+WHERE "pdfs"."id_pdf" IN :pdfs.id_pdf:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(647): CodeIgniter\Model->update('18', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-02 16:56:36 --> ErrorException: pg_query(): Query failed: ERROR:  column pdfs.id_pdf does not exist
+LINE 2: WHERE &quot;pdfs&quot;.&quot;id_pdf&quot; IN ('18')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;pdfs.id_pdfs&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "pdfs" S...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "pdfs" S...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "pdfs" S...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "pdfs" S...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(647): CodeIgniter\Model->update('18', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-02 16:56:36 --> pg_query(): Query failed: ERROR:  column pdfs.id_pdf does not exist
+LINE 2: WHERE &quot;pdfs&quot;.&quot;id_pdf&quot; IN ('18')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;pdfs.id_pdfs&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pdfs.id_pdf does not exist
+LINE 2: WHERE &quot;pdfs&quot;.&quot;id_pdf&quot; IN (\'18\')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;pdfs.id_pdfs&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "pdfs" SET "url_pdfs" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/pdfs/pdf_64d43107ba5b1.pdf\', "posx" = \'1050\', "posy" = \'204\', "height" = \'323\', "width" = \'298\', "id_mural" = \'d353cead-f22b-43f8-8c23-65f1800c29b5\', "border_color" = \'rgb(255, 255, 255)\', "border_style" = \'solid\', "border_radius" = \'1%\'
+WHERE "pdfs"."id_pdf" IN (\'18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "pdfs" SET "url_pdfs" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/pdfs/pdf_64d43107ba5b1.pdf\', "posx" = \'1050\', "posy" = \'204\', "height" = \'323\', "width" = \'298\', "id_mural" = \'d353cead-f22b-43f8-8c23-65f1800c29b5\', "border_color" = \'rgb(255, 255, 255)\', "border_style" = \'solid\', "border_radius" = \'1%\'
+WHERE "pdfs"."id_pdf" IN (\'18\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "pdfs" SET "url_pdfs" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/pdfs/pdf_64d43107ba5b1.pdf\', "posx" = \'1050\', "posy" = \'204\', "height" = \'323\', "width" = \'298\', "id_mural" = \'d353cead-f22b-43f8-8c23-65f1800c29b5\', "border_color" = \'rgb(255, 255, 255)\', "border_style" = \'solid\', "border_radius" = \'1%\'
+WHERE "pdfs"."id_pdf" IN (\'18\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "pdfs" SET "url_pdfs" = :url_pdfs:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "id_mural" = :id_mural:, "border_color" = :border_color:, "border_style" = :border_style:, "border_radius" = :border_radius:
+WHERE "pdfs"."id_pdf" IN :pdfs.id_pdf:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(647): CodeIgniter\Model->update('18', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-02 17:02:02 --> Undefined variable $imagenModel
+in APPPATH\Controllers\MuralController.php on line 680.
+ 1 APPPATH\Controllers\MuralController.php(680): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imagenModel', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 680)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-02 17:10:15 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN ('35')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'DELETE FROM "im...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "im...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "im...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "im...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', NULL, true)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(456): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(Array, false)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(701): CodeIgniter\BaseModel->delete(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-02 17:10:15 --> pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN ('35')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN (\'35\')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "imagenes"
+WHERE "id_imagen" IN :id_imagen:', [...], false)
+ 6 SYSTEMPATH\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 7 SYSTEMPATH\Model.php(456): CodeIgniter\Database\Postgre\Builder->delete()
+ 8 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete([...], false)
+ 9 APPPATH\Controllers\MuralController.php(701): CodeIgniter\BaseModel->delete([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-02 17:12:31 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN ('35')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'DELETE FROM "im...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "im...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "im...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "im...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', NULL, true)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(456): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(Array, false)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(703): CodeIgniter\BaseModel->delete(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-02 17:12:31 --> pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN ('35')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN (\'35\')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "imagenes"
+WHERE "id_imagen" IN :id_imagen:', [...], false)
+ 6 SYSTEMPATH\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 7 SYSTEMPATH\Model.php(456): CodeIgniter\Database\Postgre\Builder->delete()
+ 8 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete([...], false)
+ 9 APPPATH\Controllers\MuralController.php(703): CodeIgniter\BaseModel->delete([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-02 17:15:25 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN ('35')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'DELETE FROM "im...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "im...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "im...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "im...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', NULL, true)
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(456): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(Array, false)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(703): CodeIgniter\BaseModel->delete(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-02 17:15:25 --> pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN ('35')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;id_imagen&quot; does not exist
+LINE 2: WHERE &quot;id_imagen&quot; IN (\'35\')
+              ^
+HINT:  Perhaps you meant to reference the column &quot;imagenes.id_imagenes&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "imagenes"
+WHERE "id_imagen" IN (\'35\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "imagenes"
+WHERE "id_imagen" IN :id_imagen:', [...], false)
+ 6 SYSTEMPATH\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 7 SYSTEMPATH\Model.php(456): CodeIgniter\Database\Postgre\Builder->delete()
+ 8 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete([...], false)
+ 9 APPPATH\Controllers\MuralController.php(703): CodeIgniter\BaseModel->delete([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-02 20:33:43 --> Undefined array key "id_mural"
+in APPPATH\Controllers\MuralController.php on line 637.
+ 1 APPPATH\Controllers\MuralController.php(637): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_mural"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 637)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-02 20:38:23 --> Undefined array key "id_mural"
+in APPPATH\Controllers\MuralController.php on line 642.
+ 1 APPPATH\Controllers\MuralController.php(642): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_mural"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 642)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-02 20:39:35 --> Undefined array key "id_mural"
+in APPPATH\Controllers\MuralController.php on line 633.
+ 1 APPPATH\Controllers\MuralController.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_mural"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-02 20:40:46 --> Undefined array key "id_mural"
+in APPPATH\Controllers\MuralController.php on line 643.
+ 1 APPPATH\Controllers\MuralController.php(643): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_mural"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 643)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-02 20:41:35 --> App\Models\VideoModel::insertBatch(): Argument #1 ($data) must be of type ?array, string given, called in C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php on line 643
+in APPPATH\Models\VideoModel.php on line 25.
+ 1 APPPATH\Controllers\MuralController.php(643): App\Models\VideoModel->insertBatch('d353cead-f22b-43f8-8c23-65f1800c29b5', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
