@@ -10,6 +10,7 @@ use App\Models\PdfModel;
 use App\Models\publicarModel;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\SolicitarModel;
+use App\Models\editModel;
 use Cloudinary\Cloudinary;
 use Config\Cloudinary as CloudinaryConfig;
 use CodeIgniter\Controller; //
@@ -548,6 +549,8 @@ class MuralController extends ResourceController
             'nombrem' => $request['nombrem']
         ];
 
+        $fechaModificacion = $request['fecha_modificacion'];
+
         // actualizar datos del mural en la tabla 'mural'
         $muralModel = new Mural_Model();
         $muralModel->update($muralData['id_mural'], $muralData);
@@ -563,6 +566,7 @@ class MuralController extends ResourceController
         $imagenModel = new ImagenModel();
         $videoModel = new VideoModel();
         $pdfModel = new PdfModel();
+        $editM = new editModel();
 
         // Guardar datos de textos en la tabla 'txt'
         if (!empty($textos)) {
@@ -716,15 +720,14 @@ class MuralController extends ResourceController
         }
 
          // Guardar los datos en la tabla "solicitar"
-        /*$solicitarModel = new SolicitarModel(); // Instanciar el modelo SolicitarModel
-        $solicitarData = [
-            'id_mural' => $muralData['id_mural'],
-            'id_disenador' => $muralData['id_user'],
-            'id_editor' => 2,
 
+        $editarData = [
+            'id_mural' => $muralData['id_mural'],
+            'id_user' => $muralData['id_user'],
+            'fecha_edicion' => $fechaModificacion
         ];
-        //Guardar la solicitud
-        $solicitarModel->insertSolicitud($solicitarData); // Insertar los datos en la tabla "solicitar"*/
+        //Guardar la fecha de edicion para el log
+        $editM->insertEdit($editarData); // Insertar los datos en la tabla "editar"/
 
         $resp = [
             'mensaje'=>'Mural actuaizado con exito'
@@ -739,13 +742,7 @@ class MuralController extends ResourceController
     }
     //funcion para el cliente que devuelve todos los murales aprobados
     public function muralAll(){
-        $request = $this->request->getJSON(true);
 
-        if (empty($request)) {
-            return $this->fail('Invalid JSON data', 400);
-        }
-
-        $id_mural = $request['id_mural'];
         $muralModel = new Mural_Model();
         $muralDetails = $muralModel->obtenerMuralesAprobados();
         $muralData = [];
@@ -977,6 +974,24 @@ class MuralController extends ResourceController
         //return json_encode($muralData);
         return $this->response->setJSON($muralData);
 
+    }
+
+    public function logs(){
+        $editM = new editModel();
+        $editsDetails = $editM->getEditsDetails();
+        $responseData = [];
+
+        foreach ($editsDetails as $detail) {
+            $entry = [
+                'modificado' => $detail->modificado_por,
+                'nombre_mural' => $detail->nombre_mural,
+                'fecha_modificacion' => $detail->ultima_modificacion,
+            ];
+
+            $responseData[] = $entry;
+        }
+
+        return $this->response->setJSON($responseData);
     }
 
 

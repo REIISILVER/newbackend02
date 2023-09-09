@@ -56,8 +56,13 @@ $routes->patch('mural/aprobar','MuralController::updateEstado');
 $routes->patch('mural/rechazar','MuralController::rechazar');
 //ruta para actualizar el mural
 $routes->patch('mural/updateM','MuralController::updateMural');
+//ruta para devolver los logs de edicion
+$routes->get('mural/logs','MuralController::logs');
 
-
+//ruta para insertar un nuevo usuario
+$routes->post('mural/insertUser','UserController::insertUser');
+//ruta para devolver la lista de usuarios con los roles
+$routes->get('mural/getUsers','UserController::getUserRoles');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

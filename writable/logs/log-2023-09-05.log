@@ -1,0 +1,304 @@
+ERROR - 2023-09-05 17:46:32 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SE...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SE...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SE...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SE...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 17:46:32 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SET "id_mural" = :id_mural:, "valor" = :valor:, "font" = :font:, "font_size" = :font_size:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "color" = :color:, "border_color" = :border_color:, "border_radius" = :border_radius:, "backgroundcolor" = :backgroundcolor:, "border_style" = :border_style:, "sangria" = :sangria:
+WHERE "txt"."id_txt" IN :txt.id_txt:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 17:49:14 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SE...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SE...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SE...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SE...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 17:49:14 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SET "id_mural" = :id_mural:, "valor" = :valor:, "font" = :font:, "font_size" = :font_size:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "color" = :color:, "border_color" = :border_color:, "border_radius" = :border_radius:, "backgroundcolor" = :backgroundcolor:, "border_style" = :border_style:, "sangria" = :sangria:
+WHERE "txt"."id_txt" IN :txt.id_txt:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 20:47:09 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SE...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SE...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SE...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SE...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 20:47:09 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SET "id_mural" = :id_mural:, "valor" = :valor:, "font" = :font:, "font_size" = :font_size:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "color" = :color:, "border_color" = :border_color:, "border_radius" = :border_radius:, "backgroundcolor" = :backgroundcolor:, "border_style" = :border_style:, "sangria" = :sangria:
+WHERE "txt"."id_txt" IN :txt.id_txt:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 20:51:51 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SE...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SE...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SE...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SE...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 20:51:51 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SET "id_mural" = :id_mural:, "valor" = :valor:, "font" = :font:, "font_size" = :font_size:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "color" = :color:, "border_color" = :border_color:, "border_radius" = :border_radius:, "backgroundcolor" = :backgroundcolor:, "border_style" = :border_style:, "sangria" = :sangria:
+WHERE "txt"."id_txt" IN :txt.id_txt:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 20:54:28 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SE...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SE...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SE...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SE...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(574): CodeIgniter\Model->update('92', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 20:54:28 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'Video\', "font" = \'"Times New Roman"\', "font_size" = \'26px\', "posx" = 601, "posy" = 160, "height" = 400, "width" = 350, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(232, 28, 137)\', "border_radius" = \'4%\', "backgroundcolor" = \'rgb(185, 67, 224)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'92\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'Video\', "font" = \'"Times New Roman"\', "font_size" = \'26px\', "posx" = 601, "posy" = 160, "height" = 400, "width" = 350, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(232, 28, 137)\', "border_radius" = \'4%\', "backgroundcolor" = \'rgb(185, 67, 224)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'92\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'Video\', "font" = \'"Times New Roman"\', "font_size" = \'26px\', "posx" = 601, "posy" = 160, "height" = 400, "width" = 350, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(232, 28, 137)\', "border_radius" = \'4%\', "backgroundcolor" = \'rgb(185, 67, 224)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'92\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SET "id_mural" = :id_mural:, "valor" = :valor:, "font" = :font:, "font_size" = :font_size:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "color" = :color:, "border_color" = :border_color:, "border_radius" = :border_radius:, "backgroundcolor" = :backgroundcolor:, "border_style" = :border_style:, "sangria" = :sangria:
+WHERE "txt"."id_txt" IN :txt.id_txt:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(574): CodeIgniter\Model->update('92', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 20:54:56 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SE...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SE...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SE...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SE...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 20:54:56 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(0fea6218-2469-40c8-bc40-cc2a27e8057f) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SET "id_mural" = \'0fea6218-2469-40c8-bc40-cc2a27e8057f\', "valor" = \'imagen\', "font" = \'"Trebuchet MS"\', "font_size" = \'20px\', "posx" = 308, "posy" = 237, "height" = 300, "width" = 250, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(252, 252, 252)\', "border_radius" = \'2%\', "backgroundcolor" = \'rgb(21, 179, 179)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'79\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SET "id_mural" = :id_mural:, "valor" = :valor:, "font" = :font:, "font_size" = :font_size:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "color" = :color:, "border_color" = :border_color:, "border_radius" = :border_radius:, "backgroundcolor" = :backgroundcolor:, "border_style" = :border_style:, "sangria" = :sangria:
+WHERE "txt"."id_txt" IN :txt.id_txt:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(574): CodeIgniter\Model->update('79', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 21:11:06 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(cc4ca236-860e-4ec1-9fcc-da348f58c9a3) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SE...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SE...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SE...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SE...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(574): CodeIgniter\Model->update('92', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 21:11:07 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(cc4ca236-860e-4ec1-9fcc-da348f58c9a3) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(cc4ca236-860e-4ec1-9fcc-da348f58c9a3) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "txt" SET "id_mural" = \'cc4ca236-860e-4ec1-9fcc-da348f58c9a3\', "valor" = \'Video\', "font" = \'"Times New Roman"\', "font_size" = \'26px\', "posx" = 601, "posy" = 160, "height" = 400, "width" = 350, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(232, 28, 137)\', "border_radius" = \'4%\', "backgroundcolor" = \'rgb(185, 67, 224)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'92\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "txt" SET "id_mural" = \'cc4ca236-860e-4ec1-9fcc-da348f58c9a3\', "valor" = \'Video\', "font" = \'"Times New Roman"\', "font_size" = \'26px\', "posx" = 601, "posy" = 160, "height" = 400, "width" = 350, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(232, 28, 137)\', "border_radius" = \'4%\', "backgroundcolor" = \'rgb(185, 67, 224)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'92\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "txt" SET "id_mural" = \'cc4ca236-860e-4ec1-9fcc-da348f58c9a3\', "valor" = \'Video\', "font" = \'"Times New Roman"\', "font_size" = \'26px\', "posx" = 601, "posy" = 160, "height" = 400, "width" = 350, "color" = \'rgb(255, 255, 255)\', "border_color" = \'rgb(232, 28, 137)\', "border_radius" = \'4%\', "backgroundcolor" = \'rgb(185, 67, 224)\', "border_style" = \'solid\', "sangria" = \'center\'
+WHERE "txt"."id_txt" IN (\'92\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "txt" SET "id_mural" = :id_mural:, "valor" = :valor:, "font" = :font:, "font_size" = :font_size:, "posx" = :posx:, "posy" = :posy:, "height" = :height:, "width" = :width:, "color" = :color:, "border_color" = :border_color:, "border_radius" = :border_radius:, "backgroundcolor" = :backgroundcolor:, "border_style" = :border_style:, "sangria" = :sangria:
+WHERE "txt"."id_txt" IN :txt.id_txt:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(574): CodeIgniter\Model->update('92', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 22:19:33 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;height&quot; of relation &quot;imagenes&quot; violates not-null constraint
+DETAIL:  Failing row contains (45, C:\wamp64\www\codeigniter4-framework-5d3d4b2\recursos/imagenes/i..., null, null, 345, 258, 617637d4-46a4-46bf-aecf-27d3cfecd8e4, rgb(255, 255, 255), solid, 2%, 49793730_539374709871830_2417325933422706688_n.jpg). in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "imagene...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "imagene...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "imagene...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "imagene...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(590): CodeIgniter\Model->update('45', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-05 22:19:33 --> pg_query(): Query failed: ERROR:  null value in column &quot;height&quot; of relation &quot;imagenes&quot; violates not-null constraint
+DETAIL:  Failing row contains (45, C:\wamp64\www\codeigniter4-framework-5d3d4b2\recursos/imagenes/i..., null, null, 345, 258, 617637d4-46a4-46bf-aecf-27d3cfecd8e4, rgb(255, 255, 255), solid, 2%, 49793730_539374709871830_2417325933422706688_n.jpg).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;height&quot; of relation &quot;imagenes&quot; violates not-null constraint
+DETAIL:  Failing row contains (45, C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\recursos/imagenes/i..., null, null, 345, 258, 617637d4-46a4-46bf-aecf-27d3cfecd8e4, rgb(255, 255, 255), solid, 2%, 49793730_539374709871830_2417325933422706688_n.jpg).', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'UPDATE "imagenes" SET "id_mural" = \'617637d4-46a4-46bf-aecf-27d3cfecd8e4\', "url" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/imagenes/imagen64f3a7df507e3.jpg\', "alt" = \'49793730_539374709871830_2417325933422706688_n.jpg\', "height" = NULL, "width" = NULL, "posx" = 345, "posy" = 258, "border_color" = \'rgb(255, 255, 255)\', "border_radius" = \'2%\', "border_style" = \'solid\'
+WHERE "imagenes"."id_imagenes" IN (\'45\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "imagenes" SET "id_mural" = \'617637d4-46a4-46bf-aecf-27d3cfecd8e4\', "url" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/imagenes/imagen64f3a7df507e3.jpg\', "alt" = \'49793730_539374709871830_2417325933422706688_n.jpg\', "height" = NULL, "width" = NULL, "posx" = 345, "posy" = 258, "border_color" = \'rgb(255, 255, 255)\', "border_radius" = \'2%\', "border_style" = \'solid\'
+WHERE "imagenes"."id_imagenes" IN (\'45\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "imagenes" SET "id_mural" = \'617637d4-46a4-46bf-aecf-27d3cfecd8e4\', "url" =  E\'C:\\\\wamp64\\\\www\\\\codeigniter4-framework-5d3d4b2\\\\recursos/imagenes/imagen64f3a7df507e3.jpg\', "alt" = \'49793730_539374709871830_2417325933422706688_n.jpg\', "height" = NULL, "width" = NULL, "posx" = 345, "posy" = 258, "border_color" = \'rgb(255, 255, 255)\', "border_radius" = \'2%\', "border_style" = \'solid\'
+WHERE "imagenes"."id_imagenes" IN (\'45\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "imagenes" SET "id_mural" = :id_mural:, "url" = :url:, "alt" = :alt:, "height" = :height:, "width" = :width:, "posx" = :posx:, "posy" = :posy:, "border_color" = :border_color:, "border_radius" = :border_radius:, "border_style" = :border_style:
+WHERE "imagenes"."id_imagenes" IN :imagenes.id_imagenes:', [...], false)
+ 6 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 9 APPPATH\Controllers\MuralController.php(590): CodeIgniter\Model->update('45', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

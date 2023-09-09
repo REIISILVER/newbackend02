@@ -6,7 +6,8 @@ class user_model extends Model {
     protected $table = 'usuario'; // Nombre de la tabla de usuarios en la base de datos
     protected $primaryKey = 'id_user'; // Clave primaria de la tabla
 
-    protected $allowedFields = ['email', 'contrasenia']; // Campos permitidos para la asignación masiva
+    protected $allowedFields = ['nombre', 'contrasenia', 'apellido_p', 'apellido_m', 'id_rol', 'email'];
+
 
     public function getUserByEmail($email)
     {
@@ -17,6 +18,27 @@ class user_model extends Model {
             ->first();
 
     }
+
+    public function insertUser($userData)
+    {
+        $this->db->table('usuario')->insert($userData);
+        return true;
+    }
+
+    public function getUsers(){
+        // Construir la consulta
+        $builder = $this->db->table($this->table . ' as us');
+        $builder->select('us.id_user, us.nombre as nombre, CONCAT(us.apellido_p, \' \', us.apellido_m) as Apellidos, us.email as correo, r.id_rol as idRol, r.perfil as rol');
+        $builder->join('rol as r', 'us.id_rol = r.id_rol', 'inner');
+
+        // Ejecutar la consulta
+        $query = $builder->get();
+
+        // Devolver el resultado
+        return $query->getResult();
+    }
+
+
 
 
 

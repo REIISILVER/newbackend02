@@ -1,0 +1,233 @@
+ERROR - 2023-09-09 03:13:29 --> ErrorException: pg_query(): Query failed: ERROR:  column mural.nombreM does not exist
+LINE 1: ...io.nombre, usuario.apellido_p) as modificado_por, &quot;mural&quot;.&quot;n...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;mural.nombrem&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'SELECT CONCAT(u...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT CONCAT(u...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(u...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(u...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\editModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(979): App\Models\editModel->getEditsDetails()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->logs()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-09 03:13:29 --> pg_query(): Query failed: ERROR:  column mural.nombreM does not exist
+LINE 1: ...io.nombre, usuario.apellido_p) as modificado_por, &quot;mural&quot;.&quot;n...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;mural.nombrem&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column mural.nombreM does not exist
+LINE 1: ...io.nombre, usuario.apellido_p) as modificado_por, &quot;mural&quot;.&quot;n...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;mural.nombrem&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'SELECT CONCAT(usuario.nombre, usuario.apellido_p) as modificado_por, "mural"."nombreM" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT CONCAT(usuario.nombre, usuario.apellido_p) as modificado_por, "mural"."nombreM" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(usuario.nombre, usuario.apellido_p) as modificado_por, "mural"."nombreM" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(usuario.nombre, usuario.apellido_p) as modificado_por, "mural"."nombreM" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"', [], false)
+ 6 APPPATH\Models\editModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\MuralController.php(979): App\Models\editModel->getEditsDetails()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->logs()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-09 19:28:59 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;mural&quot;
+LINE 1: ...mbre,  &quot;, usuario.apellido_p) as modificado_por, &quot;mural&quot;.&quot;no...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'SELECT CONCAT(u...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT CONCAT(u...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(u...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(u...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\editModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(981): App\Models\editModel->getEditsDetails()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->logs()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-09 19:29:00 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;mural&quot;
+LINE 1: ...mbre,  &quot;, usuario.apellido_p) as modificado_por, &quot;mural&quot;.&quot;no...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;mural&quot;
+LINE 1: ...mbre,  &quot;, usuario.apellido_p) as modificado_por, &quot;mural&quot;.&quot;no...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'SELECT CONCAT(usuario.nombre,  ", usuario.apellido_p) as modificado_por, "mural"."nombrem" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT CONCAT(usuario.nombre,  ", usuario.apellido_p) as modificado_por, "mural"."nombrem" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(usuario.nombre,  ", usuario.apellido_p) as modificado_por, "mural"."nombrem" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(usuario.nombre,  ", usuario.apellido_p) as modificado_por, "mural"."nombrem" as "nombre_mural", "edit"."fecha_edicion" as "ultima_modificacion"
+FROM "edit"
+JOIN "mural" ON "mural"."id_mural" = "edit"."id_mural"
+JOIN "usuario" ON "usuario"."id_user" = "edit"."id_user"', [], false)
+ 6 APPPATH\Models\editModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\MuralController.php(981): App\Models\editModel->getEditsDetails()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->logs()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 20:25:07 --> Class "App\Models\UserModel" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 20:27:20 --> Cannot use object of type stdClass as array
+in APPPATH\Models\user_model.php on line 30.
+ 1 APPPATH\Controllers\UserController.php(21): App\Models\user_model->insertUser(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->insertUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 20:32:20 --> Undefined property: stdClass::$contrasenia
+in APPPATH\Models\user_model.php on line 31.
+ 1 APPPATH\Models\user_model.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasenia', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Models\\user_model.php', 31)
+ 2 APPPATH\Controllers\UserController.php(21): App\Models\user_model->insertUser(Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->insertUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-09 20:38:06 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;,&quot;
+LINE 3:                   VALUES (?, ?, crypt(?, gen_salt('bf')), ?,...
+                                   ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'CREATE EXTENSIO...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('CREATE EXTENSIO...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE EXTENSIO...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(35): CodeIgniter\Database\BaseConnection->query('CREATE EXTENSIO...', Array)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\UserController.php(21): App\Models\user_model->insertUser(Object(stdClass))
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\UserController->insertUser()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-09 20:38:06 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;,&quot;
+LINE 3:                   VALUES (?, ?, crypt(?, gen_salt('bf')), ?,...
+                                   ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;,&quot;
+LINE 3:                   VALUES (?, ?, crypt(?, gen_salt(\'bf\')), ?,...
+                                   ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'CREATE EXTENSION IF NOT EXISTS pgcrypto;
+                  INSERT INTO usuario (nombre, contrasenia, apellido_p, apellido_m, id_rol, email)
+                  VALUES (?, ?, crypt(?, gen_salt(\'bf\')), ?, ?, ?, ?)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('CREATE EXTENSION IF NOT EXISTS pgcrypto;
+                  INSERT INTO usuario (nombre, contrasenia, apellido_p, apellido_m, id_rol, email)
+                  VALUES (?, ?, crypt(?, gen_salt(\'bf\')), ?, ?, ?, ?)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE EXTENSION IF NOT EXISTS pgcrypto;
+                  INSERT INTO usuario (nombre, contrasenia, apellido_p, apellido_m, id_rol, email)
+                  VALUES (?, ?, crypt(?, gen_salt(\'bf\')), ?, ?, ?, ?)')
+ 5 APPPATH\Models\user_model.php(35): CodeIgniter\Database\BaseConnection->query('CREATE EXTENSION IF NOT EXISTS pgcrypto;
+                  INSERT INTO usuario (nombre, contrasenia, apellido_p, apellido_m, id_rol, email)
+                  VALUES (?, ?, crypt(?, gen_salt(\'bf\')), ?, ?, ?, ?)', [...])
+ 6 APPPATH\Controllers\UserController.php(21): App\Models\user_model->insertUser(Object(stdClass))
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->insertUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-09 20:53:31 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;constrasenia&quot; of relation &quot;usuario&quot; does not exist
+LINE 1: ... &quot;usuario&quot; (&quot;nombre&quot;, &quot;apellido_p&quot;, &quot;apellido_m&quot;, &quot;constrase...
+                                                             ^ in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(24): CodeIgniter\Database\BaseBuilder->insert(Object(stdClass))
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\UserController.php(21): App\Models\user_model->insertUser(Object(stdClass))
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\UserController->insertUser()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-09 20:53:32 --> pg_query(): Query failed: ERROR:  column &quot;constrasenia&quot; of relation &quot;usuario&quot; does not exist
+LINE 1: ... &quot;usuario&quot; (&quot;nombre&quot;, &quot;apellido_p&quot;, &quot;apellido_m&quot;, &quot;constrase...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;constrasenia&quot; of relation &quot;usuario&quot; does not exist
+LINE 1: ... &quot;usuario&quot; (&quot;nombre&quot;, &quot;apellido_p&quot;, &quot;apellido_m&quot;, &quot;constrase...
+                                                             ^', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "usuario" ("nombre", "apellido_p", "apellido_m", "constrasenia", "id_rol", "email") VALUES (\'User Prueba\', \'tester\', \'1\', \'user1234\', 1, \'user1234@utm.edu.ec\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "usuario" ("nombre", "apellido_p", "apellido_m", "constrasenia", "id_rol", "email") VALUES (\'User Prueba\', \'tester\', \'1\', \'user1234\', 1, \'user1234@utm.edu.ec\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "usuario" ("nombre", "apellido_p", "apellido_m", "constrasenia", "id_rol", "email") VALUES (\'User Prueba\', \'tester\', \'1\', \'user1234\', 1, \'user1234@utm.edu.ec\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "usuario" ("nombre", "apellido_p", "apellido_m", "constrasenia", "id_rol", "email") VALUES (:nombre:, :apellido_p:, :apellido_m:, :constrasenia:, :id_rol:, :email:)', [...], false)
+ 6 APPPATH\Models\user_model.php(24): CodeIgniter\Database\BaseBuilder->insert(Object(stdClass))
+ 7 APPPATH\Controllers\UserController.php(21): App\Models\user_model->insertUser(Object(stdClass))
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->insertUser()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 20:57:09 --> Call to undefined method App\Controllers\UserController::fail()
+in APPPATH\Controllers\UserController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->insertUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 22:10:00 --> Class "App\Controllers\userModel" not found
+in APPPATH\Controllers\UserController.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserRoles()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 22:12:15 --> Call to undefined method App\Models\user_model::obtenerUsuariosConRoles
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\UserController.php(43): CodeIgniter\Model->__call('obtenerUsuariosConRoles', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserRoles()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 22:14:16 --> Undefined property: stdClass::$Apellidos
+in APPPATH\Controllers\UserController.php on line 51.
+ 1 APPPATH\Controllers\UserController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$Apellidos', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\UserController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserRoles()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 22:16:57 --> Undefined property: stdClass::$Apellidos
+in APPPATH\Controllers\UserController.php on line 51.
+ 1 APPPATH\Controllers\UserController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$Apellidos', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\UserController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserRoles()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 22:23:34 --> Undefined property: stdClass::$Apellidos
+in APPPATH\Controllers\UserController.php on line 51.
+ 1 APPPATH\Controllers\UserController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$Apellidos', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\UserController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserRoles()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-09 22:45:54 --> Undefined property: stdClass::$Apellidos
+in APPPATH\Controllers\UserController.php on line 51.
+ 1 APPPATH\Controllers\UserController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$Apellidos', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\UserController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserRoles()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
