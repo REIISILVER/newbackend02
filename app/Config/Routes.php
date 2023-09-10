@@ -61,6 +61,8 @@ $routes->get('mural/logs','MuralController::logs');
 
 //ruta para insertar un nuevo usuario
 $routes->post('mural/insertUser','UserController::insertUser');
+//ruta que recibe un json con id_user
+$routes->post('mural/getUserbyId','UserController::getUserbyId');
 //ruta para devolver la lista de usuarios con los roles
 $routes->get('mural/getUsers','UserController::getUserRoles');
 /*

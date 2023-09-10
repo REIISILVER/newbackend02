@@ -54,9 +54,33 @@ class UserController extends Controller
                 'rol' => $usuario->rol
             ];
         }
-
-
         return $this->response->setJSON($resp);
+    }
+
+    public function getUserbyId(){
+        $request =  $this->request->getJSON();
+        if(!$request){
+            $resp=["error"=>"no se recibio ni un dato"];
+            return $this->response->setJSON($resp);
+        }
+
+        $userModel = new user_model();
+        $usuario = $userModel->getUserbyID($request->id_user);
+
+        if ($usuario) {
+            $resp = [
+                'id_user' => $usuario->id_user,
+                'nombre' => $usuario->nombre,
+                'apellidos' => $usuario->apellidos,
+                'correo' => $usuario->correo,
+                'id_rol' => $usuario->idRol,
+                'rol' => $usuario->rol
+            ];
+            return $this->response->setJSON($resp);
+        } else {
+            // Usuario no encontrado, se devuelve un mensaje de error.
+            return $this->response->setJSON(['error' => 'Usuario no encontrado']);
+        }
 
     }
 

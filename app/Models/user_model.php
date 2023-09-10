@@ -37,6 +37,19 @@ class user_model extends Model {
         // Devolver el resultado
         return $query->getResult();
     }
+    public function  getUserbyID($id_user){
+        // Construir la consulta
+        $builder = $this->db->table($this->table . ' as us');
+        $builder->select('us.id_user, us.nombre as nombre, CONCAT(us.apellido_p, \' \', us.apellido_m) as apellidos, us.email as correo, r.id_rol as idRol, r.perfil as rol');
+        $builder->join('rol as r', 'us.id_rol = r.id_rol', 'inner');
+        $builder->where('us.id_user', $id_user); // Filtro para el id_user
+
+        // Ejecutar la consulta
+        $query = $builder->get();
+
+        // Devolver el primer resultado (debería ser solo uno)
+        return $query->getRow();
+    }
 
 
 
