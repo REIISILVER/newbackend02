@@ -54,7 +54,4 @@ class user_model extends Model {
 
 
 
-
-
-
 }

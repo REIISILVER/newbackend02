@@ -157,7 +157,12 @@ class MuralController extends ResourceController
 
 
 
-        return $this->respondCreated('Mural guardado con exito');
+        $resp = [
+            'mensaje'=>'Mural creado con éxito'
+        ];
+
+
+        return $this->response->setJSON($resp);
 
 
 

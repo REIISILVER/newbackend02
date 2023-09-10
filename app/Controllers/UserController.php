@@ -84,4 +84,63 @@ class UserController extends Controller
 
     }
 
+    public function UpdateUser(){
+        $request = $this->request->getJSON(true);
+
+        if (empty($request)) {
+            return $this->fail('Invalid JSON data', 400);
+        }
+
+        // Obtener datos principales del mural
+        $userData = [
+            'id_user' => $request['id_user'],
+            'nombre' => $request['nombre'],
+            'apellido_p' => $request['apellido_p'],
+            'apellido_m' => $request['apellido_m'],
+            'contrasenia' => $request['contrasenia'],
+            'id_rol' => $request['id_rol'],
+            'email' => $request['correo']
+        ];
+
+        //actualizamos
+        $UserModel = new user_model();
+        $UserModel->update($userData['id_user'],$userData);
+
+        $resp = [
+            'mensaje'=>'Usuario actuaizado con exito'
+        ];
+
+
+        return $this->response->setJSON($resp);
+
+
+
+    }
+    public function deleteUser(){
+        $request = $this->request->getJSON(true);
+
+        if (empty($request)) {
+            return $this->fail('Invalid JSON data', 400);
+        }
+
+        // Obtener datos principales del mural
+        $userData = [
+            'id_user' => $request['id_user'],
+            'id_rol' => 4
+
+        ];
+
+        //actualizamos
+        $UserModel = new user_model();
+        $UserModel->update($userData['id_user'],$userData);
+
+        $resp = [
+            'mensaje'=>'Usuario eliminado con éxito'
+        ];
+
+
+        return $this->response->setJSON($resp);
+
+    }
+
 }

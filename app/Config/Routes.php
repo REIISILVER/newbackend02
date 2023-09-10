@@ -63,8 +63,15 @@ $routes->get('mural/logs','MuralController::logs');
 $routes->post('mural/insertUser','UserController::insertUser');
 //ruta que recibe un json con id_user
 $routes->post('mural/getUserbyId','UserController::getUserbyId');
+//ruta para actualizar usuario
+$routes->patch('mural/updateUser','UserController::UpdateUser');
 //ruta para devolver la lista de usuarios con los roles
 $routes->get('mural/getUsers','UserController::getUserRoles');
+
+//ruta para eliminar un usuario(conceptualmente)
+$routes->patch('mural/deleteUser','UserController::deleteUser');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
