@@ -18,6 +18,12 @@ class UserController extends Controller
         // Insertar el nuevo usuario en la base de datos
         $UserModel = new user_model();
 
+        $salt = random_bytes(22); // Genera una cadena aleatoria de 22 bytes
+
+        // Crear la contraseña encriptada usando crypt()
+        $encryptedPassword = crypt($userData->contrasenia, '$2a$12$' . base64_encode($salt));
+        //guarda la contraseña encriptada
+        $userData->contrasenia=$encryptedPassword;
         $insertedUserId = $UserModel->insertUser($userData);
 
         // Verificar si la inserción fue exitosa
@@ -60,12 +66,16 @@ class UserController extends Controller
     public function getUserbyId(){
         $request =  $this->request->getJSON();
         if(!$request){
-            $resp=["error"=>"no se recibio ni un dato"];
+            $resp=["error"=>"no se recibió ni un dato"];
             return $this->response->setJSON($resp);
         }
 
+
+
         $userModel = new user_model();
         $usuario = $userModel->getUserbyID($request->id_user);
+
+
 
         if ($usuario) {
             $resp = [
