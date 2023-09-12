@@ -63,6 +63,7 @@ class UserController extends Controller
         return $this->response->setJSON($resp);
     }
 
+    //funcion para recibir un id_user y devuelve la informacion de ese usuario
     public function getUserbyId(){
         $request =  $this->request->getJSON();
         if(!$request){
@@ -94,6 +95,7 @@ class UserController extends Controller
 
     }
 
+    //funcion para actualizar ususario segun la información que llegue
     public function UpdateUser(){
         $request = $this->request->getJSON(true);
 
@@ -111,6 +113,14 @@ class UserController extends Controller
             'id_rol' => $request['id_rol'],
             'email' => $request['correo']
         ];
+
+        //encriptamos la contraseña
+        $salt = random_bytes(22); // Genera una cadena aleatoria de 22 bytes
+
+        // Crear la contraseña encriptada usando crypt()
+        $encryptedPassword = crypt($userData['contrasenia'], '$2a$12$' . base64_encode($salt));
+        //guarda la contraseña encriptada
+        $userData['contrasenia']=$encryptedPassword;
 
         //actualizamos
         $UserModel = new user_model();
