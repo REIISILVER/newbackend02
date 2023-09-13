@@ -573,6 +573,10 @@ class MuralController extends ResourceController
         $pdfModel = new PdfModel();
         $editM = new editModel();
 
+        // Obtener los IDs actuales en la base de datos
+        $textosActuales = $textoModel->where('id_mural', $muralData['id_mural'])->findAll();
+        $idsTextosActuales = array_column($textosActuales, 'id_txt');
+
         // Guardar datos de textos en la tabla 'txt'
         if (!empty($textos)) {
 
@@ -583,7 +587,8 @@ class MuralController extends ResourceController
                     $textoModel->update($texto['id_txt'], $texto);
                 } else {
                     // Si no tiene un ID, inserta un nuevo registro
-                    $textoModel->insert($texto);
+                    $textoModel->insertTexto($texto);
+
                 }
             }
 
@@ -591,6 +596,9 @@ class MuralController extends ResourceController
         }
 
         // Guardar datos de imágenes en la tabla 'imagenes'
+        $imagenesActuales = $imagenModel->where('id_mural', $muralData['id_mural'])->findAll();
+
+        $idsImagenesActuales = array_column($imagenesActuales, 'id_imagenes');
         if (!empty($imagenes)) {
 
             foreach ($imagenes as $imagen) {
@@ -623,6 +631,8 @@ class MuralController extends ResourceController
 
 
         // Guardar datos de videos en la tabla 'videos'
+        $videosActuales = $videoModel->where('id_mural', $muralData['id_mural'])->findAll();
+        $idsVideosActuales = array_column($videosActuales, 'id_video');
         if (!empty($videos)) {
 
             foreach ($videos as $video) {
@@ -656,6 +666,8 @@ class MuralController extends ResourceController
         }
 
         // Guardar datos de pdfs en la tabla 'pdfs'
+        $pdfsActuales = $pdfModel->where('id_mural', $muralData['id_mural'])->findAll();
+        $idsPdfsActuales = array_column($pdfsActuales, 'id_pdfs');
         if (!empty($pdfs)) {
 
 
@@ -686,33 +698,34 @@ class MuralController extends ResourceController
         // Manejar elementos eliminados (eliminar los que no se actualizaron)
 
         // Obtener los IDs de textos, imágenes, videos y pdfs en la solicitud
+        /*
         $idsTextosEnSolicitud = array_column($textos, 'id_txt');
         $idsImagenesEnSolicitud = array_column($imagenes, 'id_imagenes');
         $idsVideosEnSolicitud = array_column($videos, 'id_video');
-        $idsPdfsEnSolicitud = array_column($pdfs, 'id_pdfs');
+        $idsPdfsEnSolicitud = array_column($pdfs, 'id_pdfs');*/
 
-        // Obtener los IDs actuales en la base de datos
-        $textosActuales = $textoModel->where('id_mural', $muralData['id_mural'])->findAll();
-        $idsTextosActuales = array_column($textosActuales, 'id_txt');
 
-        $imagenesActuales = $imagenModel->where('id_mural', $muralData['id_mural'])->findAll();
-        $idsImagenesActuales = array_column($imagenesActuales, 'id_imagenes');
 
-        $videosActuales = $videoModel->where('id_mural', $muralData['id_mural'])->findAll();
-        $idsVideosActuales = array_column($videosActuales, 'id_video');
 
-        $pdfsActuales = $pdfModel->where('id_mural', $muralData['id_mural'])->findAll();
-        $idsPdfsActuales = array_column($pdfsActuales, 'id_pdfs');
+
+
+
+
+
 
         // Identificar elementos de textos, imágenes, videos y pdfs que deben eliminarse
-        $idsTextosAEliminar = array_diff($idsTextosActuales, $idsTextosEnSolicitud);
-        $idsImagenesAEliminar = array_diff($idsImagenesActuales, $idsImagenesEnSolicitud);
-        $idsVideosAEliminar = array_diff($idsVideosActuales, $idsVideosEnSolicitud);
-        $idsPdfsAEliminar = array_diff($idsPdfsActuales, $idsPdfsEnSolicitud);
+
+        // Encuentra los IDs de textos que se deben eliminar (los que están en la base de datos pero no en la solicitud)
+        $idsTextosAEliminar = array_diff($idsTextosActuales, array_column($textos, 'id_txt'));
+        $idsImagenesAEliminar = array_diff($idsImagenesActuales,array_column($imagenes, 'id_imagenes'));
+        $idsVideosAEliminar = array_diff($idsVideosActuales, array_column($videos, 'id_video'));
+        $idsPdfsAEliminar = array_diff($idsPdfsActuales,array_column($pdfs, 'id_pdfs'));
 
         // Eliminar elementos marcados para eliminación
         foreach ($idsTextosAEliminar as $idTexto) {
-            $textoModel->delete($idTexto);
+
+                $textoModel->delete($idTexto);
+
         }
         foreach ($idsImagenesAEliminar as $idImagen) {
             $imagenModel->delete($idImagen);

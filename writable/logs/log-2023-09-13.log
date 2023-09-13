@@ -1,0 +1,23 @@
+CRITICAL - 2023-09-13 16:28:35 --> Undefined array key "fecha_modificacion"
+in APPPATH\Controllers\MuralController.php on line 557.
+ 1 APPPATH\Controllers\MuralController.php(557): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_modificacion"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 557)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:39:59 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('editado texto')
+ 2 APPPATH\Models\TextoModel.php(27): CodeIgniter\BaseModel->insertBatch([...], null, 100, false)
+ 3 APPPATH\Controllers\MuralController.php(586): App\Models\TextoModel->insertBatch([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 18:10:27 --> Undefined variable $idsTextosActuales
+in APPPATH\Controllers\MuralController.php on line 709.
+ 1 APPPATH\Controllers\MuralController.php(709): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idsTextosActuales', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 709)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

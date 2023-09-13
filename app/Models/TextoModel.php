@@ -26,4 +26,11 @@ class TextoModel extends Model
     {
         return parent::insertBatch($data, $escape, $batchSize, $testing);
     }
+
+    public function insertTexto($data)
+    {
+        // Inserta los datos en la tabla 'texto'
+        return $this->insert($data);
+    }
+
 }
