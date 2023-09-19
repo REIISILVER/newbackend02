@@ -49,6 +49,24 @@ class Mural_Model extends Model
 
         return $query->getResultArray();
     }
+    //devuelve las respuestas de aprobado y desaprovado
+    public function getSolRespuestas()
+    {
+        $builder = $this->db->table('mural mur');
+        $builder->select('mur.id_mural, us.id_user, mur.nombrem, mur.estado');
+        $builder->select("CONCAT(us.nombre, ' ', us.apellido_p) AS Diseñador", false);
+        $builder->select('resp.fecha_respuesta');
+
+        // Realiza las uniones (joins)
+        $builder->join('usuario us', 'us.id_user = mur.id_user', 'inner');
+        $builder->join('respuesta resp', 'resp.id_mural = mur.id_mural', 'inner');
+
+        $query = $builder->get();
+
+        return $query->getResultArray();
+    }
+
+
 
     //solicitud por ID
     public function getSolicitudById($idUser)

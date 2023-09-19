@@ -11,6 +11,7 @@ use App\Models\publicarModel;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\SolicitarModel;
 use App\Models\editModel;
+use App\Models\respuestaModel;
 use Cloudinary\Cloudinary;
 use Config\Cloudinary as CloudinaryConfig;
 use CodeIgniter\Controller; //
@@ -177,8 +178,15 @@ class MuralController extends ResourceController
     }
 
     public function getSolicitud(){
-         $muralModel = new Mural_Model();
+        $muralModel = new Mural_Model();
         $muralData = $muralModel->getSolicitudData();
+
+        return $this->response->setJSON($muralData);
+    }
+    //devuelve las respuesta a las solicitudes
+    public function getResp(){
+        $muralModel = new Mural_Model();
+        $muralData = $muralModel->getSolRespuestas();
 
         return $this->response->setJSON($muralData);
     }
@@ -491,9 +499,18 @@ class MuralController extends ResourceController
           'id_mural'=>$request['id_mural'],
           'id_user' =>$request['id_user'],
           'fecha_publicacion' =>$request['fecha_publicacion'],
-          'fin_publicacion' =>$request['fin_publicacion']
+          'fin_publicacion' =>$request['fin_publicacion'],
+
         ];
         $publicarData->insertPublicacion($publicarAr);//insertamos la publicacion
+        //insertamos la fecha de respuesta
+        $respuesta = new respuestaModel();
+        $respuestaAr = [
+            'id_mural'=>$request['id_mural'],
+            'id_user' =>$request['id_user'],
+            'fecha_respuesta' =>$request['fechaAprobado'],
+        ];
+        $respuesta->insertRespuesta($respuestaAr);
 
         $rep = [
           'mensaje'=>'actualización de estado exitosamente'
@@ -518,11 +535,19 @@ class MuralController extends ResourceController
         $muralData = [
             'id_mural' => $request['id_mural'],
             'estado' => $request['estado']
-
         ];
-
+    //fechaRechazado
 
         $MuralModel->update($muralData['id_mural'], $muralData);
+
+        $respuesta = new respuestaModel();
+        $respuestaAr = [
+            'id_mural'=>$request['id_mural'],
+            'id_user' =>$request['id_user'],
+            'fecha_respuesta' =>$request['fechaRechazado'],
+        ];
+        $respuesta->insertRespuesta($respuestaAr);
+
         $rep = [
             'mensaje'=>'actualización de estado exitosamente'
         ];
@@ -995,8 +1020,17 @@ class MuralController extends ResourceController
     }
 
     public function logs(){
+
+        $request = $this->request->getJSON(true);
+
+        if (empty($request)) {
+            return $this->fail('Invalid JSON data', 400);
+        }
+
+        $id_user = $request['id_user'];
+
         $editM = new editModel();
-        $editsDetails = $editM->getEditsDetails();
+        $editsDetails = $editM->getEditsDetail($id_user);
         $responseData = [];
 
         foreach ($editsDetails as $detail) {
@@ -1011,6 +1045,10 @@ class MuralController extends ResourceController
 
         return $this->response->setJSON($responseData);
     }
+
+
+
+
 
 
 }

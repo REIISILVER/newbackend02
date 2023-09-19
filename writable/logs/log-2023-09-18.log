@@ -1,0 +1,25 @@
+CRITICAL - 2023-09-18 17:22:34 --> Undefined array key "fecha_modificacion"
+in APPPATH\Controllers\MuralController.php on line 557.
+ 1 APPPATH\Controllers\MuralController.php(557): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_modificacion"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\MuralController.php', 557)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 22:21:41 --> Class "App\Models\respuestaModel" not found
+in APPPATH\Controllers\MuralController.php on line 500.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateEstado()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 22:22:01 --> Class "App\Models\respuestaModel" not found
+in APPPATH\Controllers\MuralController.php on line 536.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->rechazar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 22:24:32 --> Class "App\Models\respuestaModel" not found
+in APPPATH\Controllers\MuralController.php on line 536.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->rechazar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
