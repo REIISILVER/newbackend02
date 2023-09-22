@@ -29,11 +29,22 @@ class MuralController extends ResourceController
             return $this->fail('Invalid JSON data', 400);
         }
 
+        //obtenemos la imagen para el dashboard
+        $base64Data = str_replace('data:image/png;base64,', '',$request['imgMural']);
+
+        $filename = 'imagen' . uniqid() .'.png'; // Nombre del archivo en el servidor con un ID único
+        $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
+
+
+        file_put_contents($filePath, base64_decode($base64Data));
+
+
         // Obtener datos principales del mural
         $muralData = [
             'id_mural' => $request['id_mural'],
             'id_user' => $request['id_user'],
             'height' => $request['height'],
+            'imgmural'=>$filePath,
             'width' => $request['width'],
             'estado' => $request['estado'],
             'nombrem' => $request['nombrem']
@@ -72,22 +83,21 @@ class MuralController extends ResourceController
                 //$fileContent = file_get_contents($imagen['file']);
 
                 // Eliminar el prefijo "data:image/jpeg;base64," y obtener solo los datos codificados en Base64
-                $base64Data = str_replace('data:image/jpeg;base64,', '', $imagen['url']);
+                if (preg_match('/^https?:/', $imagen['url'])) {
+                    //como ya aesta almacenado en un servidor simplemente se guarda en el array a actualizar
+                    $imagenReferences[] = ['url' => $imagen['url'], 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+                }else{
+                    $base64Data = str_replace('data:image/jpeg;base64,', '', $imagen['url']);
 
-                $filename = 'imagen' . uniqid() .'.jpg'; // Nombre del archivo en el servidor con un ID único
-               $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
+                    $filename = 'imagen' . uniqid() .'.jpg'; // Nombre del archivo en el servidor con un ID único
+                    $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
 
 
-               file_put_contents($filePath, base64_decode($base64Data));
-                /**$cloudinaryConfig = new CloudinaryConfig();
-                // Inicializar Cloudinary con la configuración
-                $cloudinary = new Cloudinary($cloudinaryConfig);
-                // Usar Cloudinary como lo necesites
-                $cloudinaryData = $cloudinary->uploadApi()->upload($imagen['file']);
-                // Obtener la URL del video en Cloudinary
-                $imagenUrl = $cloudinaryData['secure_url'];
-                 **/
-                $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+                    file_put_contents($filePath, base64_decode($base64Data));
+                    $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+
+                }
+
 
             }
 
@@ -108,11 +118,17 @@ class MuralController extends ResourceController
                 //extraer la ruta
                 //$extension = pathinfo($video['url_video'], PATHINFO_EXTENSION);
 
-                $base64Data = str_replace('data:video/mp4;base64,', '', $video['url_video']);
-                $filename = 'video_' . uniqid() .'.mp4'; // Nombre del archivo en el servidor con un ID único
-                $filePath = FCPATH  . 'recursos/videos/' . $filename;
-                file_put_contents($filePath, base64_decode( $base64Data));
-                $videoReferences[] = ['url_video' => $filePath, 'height' => $video['height'], 'width' => $video['width'], 'posx' => $video['posx'], 'posy' => $video['posy'],'formato'=>$video['formato'],'duracion'=>$video['duration'], 'id_mural' => $video['id_mural'], 'border_color' => $video['border_color'], 'border_style' => $video['border_style'], 'border_radius' => $video['border_radius']]; // Guardar ademas la referencia en el array $videoReferences
+                if (preg_match('/^https?:/', $video['url_video'])) {
+                    $videoReferences[] = ['url_video' => $video['url_video'], 'height' => $video['height'], 'width' => $video['width'], 'posx' => $video['posx'], 'posy' => $video['posy'],'formato'=>$video['formato'],'duracion'=>$video['duration'], 'id_mural' => $video['id_mural'], 'border_color' => $video['border_color'], 'border_style' => $video['border_style'], 'border_radius' => $video['border_radius']]; // Guardar ademas la referencia en el array $videoReferences
+                }else{
+                    $base64Data = str_replace('data:video/mp4;base64,', '', $video['url_video']);
+                    $filename = 'video_' . uniqid() .'.mp4'; // Nombre del archivo en el servidor con un ID único
+                    $filePath = FCPATH  . 'recursos/videos/' . $filename;
+                    file_put_contents($filePath, base64_decode( $base64Data));
+                    $videoReferences[] = ['url_video' => $filePath, 'height' => $video['height'], 'width' => $video['width'], 'posx' => $video['posx'], 'posy' => $video['posy'],'formato'=>$video['formato'],'duracion'=>$video['duration'], 'id_mural' => $video['id_mural'], 'border_color' => $video['border_color'], 'border_style' => $video['border_style'], 'border_radius' => $video['border_radius']]; // Guardar ademas la referencia en el array $videoReferences
+                }
+
+
             }
 
             // Insertar las referencias de pdfs en la tabla 'pdfs'
@@ -128,12 +144,19 @@ class MuralController extends ResourceController
             $pdfModel = new PdfModel();
 
             foreach ($pdfs as $pdf) {
-                // Eliminar el prefijo "data:application/pdf;base64," y obtener solo los datos codificados en Base64
-                $base64Data = str_replace('data:application/pdf;base64,', '', $pdf['url_pdfs']);
-                $filename = 'pdf_' . uniqid() . '.pdf'; // Nombre del archivo en el servidor con un ID único
-                $filePath = FCPATH  . 'recursos/pdfs/' . $filename;
-                file_put_contents($filePath, base64_decode($base64Data));
-                $pdfReferences[] = ['url_pdfs' => $filePath, 'height' => $pdf['height'], 'width' => $pdf['width'], 'posx' => $pdf['posx'], 'posy' => $pdf['posy'], 'id_mural' => $pdf['id_mural'], 'border_color' => $pdf['border_color'], 'border_style' => $pdf['border_style'], 'border_radius' => $pdf['border_radius']]; // Guardar ademas la referencia en el array $pdfReferences
+                if (preg_match('/^https?:/',  $pdf['url_pdfs'])) {
+                    $pdfReferences[] = ['url_pdfs' =>  $pdf['url_pdfs'], 'height' => $pdf['height'], 'width' => $pdf['width'], 'posx' => $pdf['posx'], 'posy' => $pdf['posy'], 'id_mural' => $pdf['id_mural'], 'border_color' => $pdf['border_color'], 'border_style' => $pdf['border_style'], 'border_radius' => $pdf['border_radius']]; // Guardar ademas la referencia en el array $pdfReferences
+                }else{
+                    // Eliminar el prefijo "data:application/pdf;base64," y obtener solo los datos codificados en Base64
+                    $base64Data = str_replace('data:application/pdf;base64,', '', $pdf['url_pdfs']);
+                    $filename = 'pdf_' . uniqid() . '.pdf'; // Nombre del archivo en el servidor con un ID único
+                    $filePath = FCPATH  . 'recursos/pdfs/' . $filename;
+                    file_put_contents($filePath, base64_decode($base64Data));
+                    $pdfReferences[] = ['url_pdfs' => $filePath, 'height' => $pdf['height'], 'width' => $pdf['width'], 'posx' => $pdf['posx'], 'posy' => $pdf['posy'], 'id_mural' => $pdf['id_mural'], 'border_color' => $pdf['border_color'], 'border_style' => $pdf['border_style'], 'border_radius' => $pdf['border_radius']]; // Guardar ademas la referencia en el array $pdfReferences
+                }
+
+
+
             }
 
             // Insertar las referencias de pdfs en la tabla 'pdfs'
@@ -222,6 +245,7 @@ class MuralController extends ResourceController
             $formattedRow = [
                 'id_mural' => $row['id_mural'],
                 'nombrem'=>$row['nombrem'],
+                'imgmural' =>$row['imgmural'],
                 'imagenes' => $row['imagenes'],
                 'textos' => $row['txts'],
                 'videos' => $row['videos'],
@@ -234,7 +258,7 @@ class MuralController extends ResourceController
         return $this->response->setJSON($formattedResults);
     }
 
-    //funcion para usar al momento de recibir un Id de un mural
+    //funcion para usar al momento de recibir un Id de un mural //aqui es donde se envia la mural para que se pueda  editar
     public function getMuralbyId()
     {
         $request = $this->request->getJSON(true);
@@ -242,6 +266,8 @@ class MuralController extends ResourceController
         if (empty($request)) {
             return $this->fail('Invalid JSON data', 400);
         }
+
+
 
         $id_mural = $request['id_mural'];
         $muralModel = new Mural_Model();
@@ -563,6 +589,13 @@ class MuralController extends ResourceController
         if (empty($request)) {
             return $this->fail('Invalid JSON data', 400);
         }
+        //obtenemos la imagen para el dashboard
+        $base64Data = str_replace('data:image/png;base64,', '',$request['imgMural']);
+
+        $filename = 'imagen' . uniqid() .'.png'; // Nombre del archivo en el servidor con un ID único
+        $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
+
+        file_put_contents($filePath, base64_decode($base64Data));
         function my_dump($data) {
             echo '<pre>';
             print_r($data);
@@ -576,7 +609,8 @@ class MuralController extends ResourceController
             'height' => $request['height'],
             'width' => $request['width'],
             'estado' => $request['estado'],
-            'nombrem' => $request['nombrem']
+            'nombrem' => $request['nombrem'],
+            'imgmural'=>$filePath
         ];
 
         $fechaModificacion = $request['fecha_modificacion'];

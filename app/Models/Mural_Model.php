@@ -8,7 +8,7 @@ class Mural_Model extends Model
 {
     protected $table = 'mural'; // Nombre de la tabla
     protected $primaryKey = 'id_mural'; // Nombre de la clave primaria
-    protected $allowedFields = ['id_mural', 'id_user', 'height', 'width', 'estado', 'nombrem']; // Campos permitidos para inserción masiva
+    protected $allowedFields = ['id_mural', 'id_user', 'height', 'width', 'estado', 'nombrem','	imgmural']; // Campos permitidos para inserción masiva
 
     protected $returnType = 'array'; // Tipo de datos de retorno, en este caso un arreglo
     protected $useTimestamps = false; // No usar timestamps (created_at, updated_at)

@@ -1,0 +1,36 @@
+ERROR - 2023-09-21 15:59:46 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(2b0f3514-cf2e-4f9c-be5c-ae9dbbd235bc) is not present in table &quot;mural&quot;. in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\wamp64\\www\\c...', 147)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "tx...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tx...')
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tx...')
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tx...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\TextoModel.php(33): CodeIgniter\Model->insert(Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(627): App\Models\TextoModel->insertTexto(Array)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-21 15:59:46 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(2b0f3514-cf2e-4f9c-be5c-ae9dbbd235bc) is not present in table &quot;mural&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;txt&quot; violates foreign key constraint &quot;txt_id_mural_fkey&quot;
+DETAIL:  Key (id_mural)=(2b0f3514-cf2e-4f9c-be5c-ae9dbbd235bc) is not present in table &quot;mural&quot;.', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\system\\Database\\Postgre\\Connection.php', 147)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "txt" ("id_mural", "valor", "font", "font_size", "posx", "posy", "height", "width", "color", "border_color", "border_radius", "backgroundcolor", "border_style", "sangria") VALUES (\'2b0f3514-cf2e-4f9c-be5c-ae9dbbd235bc\', \'Memes\', \'Georgia\', \'20px\', 660, 222, 75, 200, \'rgb(0,0,0)\', \'rgb(255, 255, 255)\', \'4%\', \'rgb(148, 62, 125)\', \'solid\', \'center\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "txt" ("id_mural", "valor", "font", "font_size", "posx", "posy", "height", "width", "color", "border_color", "border_radius", "backgroundcolor", "border_style", "sangria") VALUES (\'2b0f3514-cf2e-4f9c-be5c-ae9dbbd235bc\', \'Memes\', \'Georgia\', \'20px\', 660, 222, 75, 200, \'rgb(0,0,0)\', \'rgb(255, 255, 255)\', \'4%\', \'rgb(148, 62, 125)\', \'solid\', \'center\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "txt" ("id_mural", "valor", "font", "font_size", "posx", "posy", "height", "width", "color", "border_color", "border_radius", "backgroundcolor", "border_style", "sangria") VALUES (\'2b0f3514-cf2e-4f9c-be5c-ae9dbbd235bc\', \'Memes\', \'Georgia\', \'20px\', 660, 222, 75, 200, \'rgb(0,0,0)\', \'rgb(255, 255, 255)\', \'4%\', \'rgb(148, 62, 125)\', \'solid\', \'center\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "txt" ("id_mural", "valor", "font", "font_size", "posx", "posy", "height", "width", "color", "border_color", "border_radius", "backgroundcolor", "border_style", "sangria") VALUES (:id_mural:, :valor:, :font:, :font_size:, :posx:, :posy:, :height:, :width:, :color:, :border_color:, :border_radius:, :backgroundcolor:, :border_style:, :sangria:)', [...], false)
+ 6 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Models\TextoModel.php(33): CodeIgniter\Model->insert([...])
+10 APPPATH\Controllers\MuralController.php(627): App\Models\TextoModel->insertTexto([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
