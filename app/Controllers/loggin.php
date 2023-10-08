@@ -64,9 +64,9 @@ class loggin extends BaseController
     protected function verifyToken($token)
     {
         $key = 'generatokens'; // Clave secreta para verificar el token
-
+        $algorithm ='HS256';
         try {
-            $decoded = JWT::decode($token, $key, ['HS256']);
+            $decoded = JWT::decode($token, $key, $algorithm);
             return (array) $decoded;
         } catch (\Exception $e) {
             return null;

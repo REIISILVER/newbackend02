@@ -39,8 +39,10 @@ $routes->post('login','loggin::loginOn');
 $routes->get('mural/getId','MuralController::getIdMurals');
 //ruta para obtener las solicitudes
 $routes->get('mural/solicitudes','MuralController::getSolicitud');
-//ruta para devolver las respuestas a las solicitudes
+//ruta para devolver las respuestas a las solicitudes getReject
 $routes->get('mural/respuestas','MuralController::getResp');
+//ruta para devolver las respuestas a las solicitudes rechazadas
+$routes->get('mural/respreject','MuralController::getReject');
 
 //ruta para pasar id del user y que devuelva las solicitudes solo de ese usuario
 $routes->post('mural/solbyuser','MuralController::solicitudByIdUser');

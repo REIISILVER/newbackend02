@@ -1,0 +1,130 @@
+CRITICAL - 2023-09-25 02:38:22 --> Undefined array key "correo"
+in APPPATH\Controllers\UserController.php on line 113.
+ 1 APPPATH\Controllers\UserController.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'C:\\wamp64\\www\\codeigniter4-framework-5d3d4b2\\app\\Controllers\\UserController.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->UpdateUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-25 17:25:31 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" ...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4...', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-25 17:25:31 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" SET "id_mural" = :id_mural:, "id_user" = :id_user:, "height" = :height:, "width" = :width:, "estado" = :estado:, "nombrem" = :nombrem:
+WHERE "mural"."id_mural" IN :mural.id_mural:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4cdd-a835-47a48b4dbf7b', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-25 17:26:31 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" ...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4...', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-25 17:26:31 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" SET "id_mural" = :id_mural:, "id_user" = :id_user:, "height" = :height:, "width" = :width:, "estado" = :estado:, "nombrem" = :nombrem:
+WHERE "mural"."id_mural" IN :mural.id_mural:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4cdd-a835-47a48b4dbf7b', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-25 17:27:27 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" ...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4...', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-25 17:27:27 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" SET "id_mural" = :id_mural:, "id_user" = :id_user:, "height" = :height:, "width" = :width:, "estado" = :estado:, "nombrem" = :nombrem:
+WHERE "mural"."id_mural" IN :mural.id_mural:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4cdd-a835-47a48b4dbf7b', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-25 17:29:04 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" ...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4...', Array)
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#11 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-09-25 17:29:04 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "mural" SET "id_mural" = :id_mural:, "id_user" = :id_user:, "height" = :height:, "width" = :width:, "estado" = :estado:, "nombrem" = :nombrem:
+WHERE "mural"."id_mural" IN :mural.id_mural:', [...], false)
+ 3 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\MuralController.php(638): CodeIgniter\Model->update('7e5e041a-b89f-4cdd-a835-47a48b4dbf7b', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->updateMural()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-25 23:02:25 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 37906984 bytes)
+in APPPATH\Controllers\MuralController.php on line 740.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

@@ -1,0 +1,365 @@
+ERROR - 2023-10-04 15:37:52 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:37:52 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "solicitar" "sol" ON "sol"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:42:50 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:42:50 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "solicitar" "sol" ON "sol"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:44:00 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:44:00 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "solicitar" "sol" ON "sol"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:44:06 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:44:06 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id_user", "us"."nombre" as "nombre", CONCAT(us.apellido_p, \' \', us.apellido_m) as apellidos, "us"."email" as "correo", "r"."id_rol" as "idRol", "r"."perfil" as "rol"
+FROM "usuario" as "us"
+INNER JOIN "rol" as "r" ON "us"."id_rol" = "r"."id_rol"
+WHERE "us"."id_user" = :us.id_user:', [...], false)
+ 3 APPPATH\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:44:33 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:44:33 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "solicitar" "sol" ON "sol"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:44:38 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:44:38 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id_user", "us"."nombre" as "nombre", CONCAT(us.apellido_p, \' \', us.apellido_m) as apellidos, "us"."email" as "correo", "r"."id_rol" as "idRol", "r"."perfil" as "rol"
+FROM "usuario" as "us"
+INNER JOIN "rol" as "r" ON "us"."id_rol" = "r"."id_rol"
+WHERE "us"."id_user" = :us.id_user:', [...], false)
+ 3 APPPATH\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:44:43 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:44:43 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id_user", "us"."nombre" as "nombre", CONCAT(us.apellido_p, \' \', us.apellido_m) as apellidos, "us"."email" as "correo", "r"."id_rol" as "idRol", "r"."perfil" as "rol"
+FROM "usuario" as "us"
+INNER JOIN "rol" as "r" ON "us"."id_rol" = "r"."id_rol"
+WHERE "us"."id_user" = :us.id_user:', [...], false)
+ 3 APPPATH\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:44:48 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:44:48 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id_user", "us"."nombre" as "nombre", CONCAT(us.apellido_p, \' \', us.apellido_m) as apellidos, "us"."email" as "correo", "r"."id_rol" as "idRol", "r"."perfil" as "rol"
+FROM "usuario" as "us"
+INNER JOIN "rol" as "r" ON "us"."id_rol" = "r"."id_rol"
+WHERE "us"."id_user" = :us.id_user:', [...], false)
+ 3 APPPATH\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:44:53 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:44:53 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "solicitar" "sol" ON "sol"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:46:25 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:46:25 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "us"."id_user", "us"."nombre" as "nombre", CONCAT(us.apellido_p, \' \', us.apellido_m) as apellidos, "us"."email" as "correo", "r"."id_rol" as "idRol", "r"."perfil" as "rol"
+FROM "usuario" as "us"
+INNER JOIN "rol" as "r" ON "us"."id_rol" = "r"."id_rol"
+WHERE "us"."id_user" = :us.id_user:', [...], false)
+ 3 APPPATH\Models\user_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\UserController.php(77): App\Models\user_model->getUserbyID(2)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->getUserbyId()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:52:28 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:52:28 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "solicitar" "sol" ON "sol"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 15:59:01 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 15:59:01 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, us.apellido_p) as Diseñador, "sol"."fecha_solicitud"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "solicitar" "sol" ON "sol"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(223): App\Models\Mural_Model->getSolicitudData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getSolicitud()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 16:58:57 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."i...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(65): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(230): App\Models\Mural_Model->getSolRespuestas()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->getResp()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-04 16:58:57 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur"."id_mural", "us"."id_user", "mur"."nombrem", "mur"."estado", CONCAT(us.nombre, \' \', us.apellido_p) AS Diseñador, "resp"."fecha_respuesta", "pub"."fecha_publicacion", "pub"."fin_publicacion"
+FROM "mural" "mur"
+INNER JOIN "usuario" "us" ON "us"."id_user" = "mur"."id_user"
+INNER JOIN "respuesta" "resp" ON "resp"."id_mural" = "mur"."id_mural"
+INNER JOIN "publicar" "pub" ON "pub"."id_mural" = "mur"."id_mural"', [], false)
+ 3 APPPATH\Models\Mural_Model.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(230): App\Models\Mural_Model->getSolRespuestas()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->getResp()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

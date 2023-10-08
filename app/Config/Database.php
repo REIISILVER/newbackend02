@@ -46,11 +46,8 @@ User & Default database:	khohrezb
         'strictOn' => false,
         'failover' => [],
         'port'     => 5432,
-    ];*/
+    ];
 
-    /**
-     * The default database connection.
-     */
     public array $default = [
         'DSN'      => '',
         'hostname' => 'silly.db.elephantsql.com',
@@ -69,6 +66,32 @@ User & Default database:	khohrezb
         'strictOn' => false,
         'failover' => [],
         'port'     => 5432,
+    ];
+
+
+   */
+
+    /**
+     * The default database connection.
+     */
+    public array $default = [
+        'DSN'      => '',
+        'hostname' => 'containers-us-west-151.railway.app',
+        'username' => 'postgres',
+        'password' => 'eUCpUvcid6EpFMbuAVXH',
+        'database' => 'railway',
+        'DBDriver' => 'Postgre',
+        'DBPrefix' => '',
+        'pConnect' => true,
+        'DBDebug'  => (ENVIRONMENT == 'production'),
+        'charset'  => 'utf8',
+        'DBCollat' => 'Spanish_Spain.1252',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 6764,
     ];
 
     /**

@@ -1,0 +1,132 @@
+ERROR - 2023-10-03 04:07:50 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-03 04:07:50 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-03 04:10:11 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-03 04:10:11 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-03 04:10:57 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-03 04:10:57 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-03 04:13:36 --> Error connecting to the database: ErrorException: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot; in C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_pconnect(): ...', 'C:\\wamp64\\www\\c...', 75)
+#1 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\Postgre\Connection.php(75): pg_pconnect('host=silly.db.e...')
+#2 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#3 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#5 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\codeigniter4-framework-5d3d4b2\app\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+#7 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#8 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 C:\wamp64\www\codeigniter4-framework-5d3d4b2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\codeigniter4-framework-5d3d4b2\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-03 04:13:36 --> Unable to connect to the database.
+Main connection [Postgre]: pg_pconnect(): Unable to connect to PostgreSQL server: FATAL:  too many connections for role &quot;khohrezb&quot;
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH\Models\Mural_Model.php(159): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\MuralController.php(854): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -96,7 +96,7 @@ class UserController extends Controller
     }
 
     //funcion para actualizar ususario segun la información que llegue
-    public function UpdateUser(){
+    public function UpdateUser() {
         $request = $this->request->getJSON(true);
 
         if (empty($request)) {
@@ -109,33 +109,29 @@ class UserController extends Controller
             'nombre' => $request['nombre'],
             'apellido_p' => $request['apellido_p'],
             'apellido_m' => $request['apellido_m'],
-            'contrasenia' => $request['contrasenia'],
             'id_rol' => $request['id_rol'],
             'email' => $request['correo']
         ];
 
-        //encriptamos la contraseña
-        $salt = random_bytes(22); // Genera una cadena aleatoria de 22 bytes
+        // Verificar si 'contrasenia' está presente en los datos proporcionados
+        if (isset($request['contrasenia'])) {
+            // Encriptar la contraseña si está presente
+            $salt = random_bytes(22); // Genera una cadena aleatoria de 22 bytes
+            $encryptedPassword = crypt($request['contrasenia'], '$2a$12$' . base64_encode($salt));
+            $userData['contrasenia'] = $encryptedPassword;
+        }
 
-        // Crear la contraseña encriptada usando crypt()
-        $encryptedPassword = crypt($userData['contrasenia'], '$2a$12$' . base64_encode($salt));
-        //guarda la contraseña encriptada
-        $userData['contrasenia']=$encryptedPassword;
-
-        //actualizamos
+        // Actualizar los datos del usuario
         $UserModel = new user_model();
-        $UserModel->update($userData['id_user'],$userData);
+        $UserModel->update($userData['id_user'], $userData);
 
         $resp = [
-            'mensaje'=>'Usuario actuaizado con exito'
+            'mensaje' => 'Usuario actualizado con éxito'
         ];
 
-
         return $this->response->setJSON($resp);
-
-
-
     }
+
     public function deleteUser(){
         $request = $this->request->getJSON(true);
 

@@ -56,16 +56,32 @@ class Mural_Model extends Model
         $builder->select('mur.id_mural, us.id_user, mur.nombrem, mur.estado');
         $builder->select("CONCAT(us.nombre, ' ', us.apellido_p) AS Diseñador", false);
         $builder->select('resp.fecha_respuesta');
+        $builder->select('pub.fecha_publicacion,pub.fin_publicacion');
 
         // Realiza las uniones (joins)
         $builder->join('usuario us', 'us.id_user = mur.id_user', 'inner');
         $builder->join('respuesta resp', 'resp.id_mural = mur.id_mural', 'inner');
-
+        $builder->join('publicar pub', 'pub.id_mural = mur.id_mural', 'inner');
         $query = $builder->get();
 
         return $query->getResultArray();
     }
+//devuelve las respuestas de los rechazados
+public function  getsolreject(){
+    $builder = $this->db->table('mural mur');
+    $builder->select('mur.id_mural, us.id_user, mur.nombrem, mur.estado');
+    $builder->select("CONCAT(us.nombre, ' ', us.apellido_p) AS Diseñador", false);
+    $builder->select('resp.fecha_respuesta');
 
+    $builder->join('usuario us', 'us.id_user = mur.id_user', 'inner');
+    $builder->join('respuesta resp', 'resp.id_mural = mur.id_mural', 'inner');
+
+    $builder->where('mur.estado', 'rechazado');
+
+    $query = $builder->get();
+
+    return $query->getResultArray();
+}
 
 
     //solicitud por ID

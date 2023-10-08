@@ -87,14 +87,32 @@ class MuralController extends ResourceController
                     //como ya aesta almacenado en un servidor simplemente se guarda en el array a actualizar
                     $imagenReferences[] = ['url' => $imagen['url'], 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
                 }else{
-                    $base64Data = str_replace('data:image/jpeg;base64,', '', $imagen['url']);
 
-                    $filename = 'imagen' . uniqid() .'.jpg'; // Nombre del archivo en el servidor con un ID único
-                    $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
+                    if (strpos($imagen['url'], 'data:image/jpeg;base64,') === 0) {
+                        // Si es una imagen JPEG, procesa como tal
+                        $base64Data = str_replace('data:image/jpeg;base64,', '', $imagen['url']);
+                        $filename = 'imagen' . uniqid() . '.jpg';
+                        $filename = 'imagen' . uniqid() .'.jpg'; // Nombre del archivo en el servidor con un ID único
+                        $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
 
 
-                    file_put_contents($filePath, base64_decode($base64Data));
-                    $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+                        file_put_contents($filePath, base64_decode($base64Data));
+                        $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+
+                    } else {
+                        // Si no es una imagen JPEG, procesa como PNG (u otro formato si es necesario)
+                        $base64Data = str_replace('data:image/png;base64,', '', $imagen['url']);
+                        $filename = 'imagen' . uniqid() . '.png';
+                        $filename = 'imagen' . uniqid() .'.png'; // Nombre del archivo en el servidor con un ID único
+                        $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
+
+
+                        file_put_contents($filePath, base64_decode($base64Data));
+                        $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+
+                    }
+
+
 
                 }
 
@@ -206,10 +224,17 @@ class MuralController extends ResourceController
 
         return $this->response->setJSON($muralData);
     }
-    //devuelve las respuesta a las solicitudes
+    //devuelve las respuesta a las solicitudes aprobadas
     public function getResp(){
         $muralModel = new Mural_Model();
         $muralData = $muralModel->getSolRespuestas();
+
+        return $this->response->setJSON($muralData);
+    }
+    //devuelve las solicitudes rechazadas
+    public function  getReject(){
+        $muralModel = new Mural_Model();
+        $muralData = $muralModel->getsolreject();
 
         return $this->response->setJSON($muralData);
     }
@@ -666,16 +691,28 @@ class MuralController extends ResourceController
                     $imagenModel->update($imagen['id_imagenes'], $imagen);
                 } else {
 
-                    // Eliminar el prefijo "data:image/jpeg;base64," y obtener solo los datos codificados en Base64
-                    $base64Data = str_replace('data:image/jpeg;base64,', '', $imagen['url']);
+                    if (strpos($imagen['url'], 'data:image/jpeg;base64,') === 0) {
+                        // Si es una imagen JPEG, procesa como tal
+                        $base64Data = str_replace('data:image/jpeg;base64,', '', $imagen['url']);
 
-                    $filename = 'imagen' . uniqid() . '.jpg'; // Nombre del archivo en el servidor con un ID único
-                    $filePath = FCPATH . 'recursos/imagenes/' . $filename;
+                        $filename = 'imagen' . uniqid() .'.jpg'; // Nombre del archivo en el servidor con un ID único
+                        $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
 
 
-                    file_put_contents($filePath, base64_decode($base64Data));
+                        file_put_contents($filePath, base64_decode($base64Data));
+                        $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
 
-                    $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'], 'alt' => $imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+                    } else {
+                        // Si no es una imagen JPEG, procesa como PNG (u otro formato si es necesario)
+                        $base64Data = str_replace('data:image/png;base64,', '', $imagen['url']);
+                        $filename = 'imagen' . uniqid() .'.png'; // Nombre del archivo en el servidor con un ID único
+                        $filePath = FCPATH  . 'recursos/imagenes/' . $filename;
+
+
+                        file_put_contents($filePath, base64_decode($base64Data));
+                        $imagenReferences[] = ['url' => $filePath, 'height' => $imagen['height'], 'width' => $imagen['width'], 'posx' => $imagen['posx'], 'posy' => $imagen['posy'],'alt'=>$imagen['alt'], 'id_mural' => $imagen['id_mural'], 'border_color' => $imagen['border_color'], 'border_style' => $imagen['border_style'], 'border_radius' => $imagen['border_radius']]; // Guardar ademas la referencia en el array $imagenReferences
+
+                    }
                 }
             }
 
