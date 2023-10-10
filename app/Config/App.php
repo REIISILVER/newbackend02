@@ -18,7 +18,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost:8098/codeigniter4-framework-5d3d4b2//';
+    public string $baseURL = 'https://newbackend02.vercel.app//';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
