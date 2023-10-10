@@ -7,13 +7,17 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/index.php"
+      "dest": "index.php"
     }
   ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "api/index.php"
+      "destination": "index.php"
+    },
+    {
+      "source": "^/index\\.php(/|$)",
+      "destination": "index.php"
     }
   ],
   "headers": [
@@ -28,4 +32,5 @@
     }
   ]
 }
+
 
