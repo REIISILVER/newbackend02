@@ -9,5 +9,23 @@
       "src": "/(.*)",
       "dest": "api/index.php"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "api/index.php"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.php",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=UTF-8"
+        }
+      ]
+    }
   ]
 }
+
